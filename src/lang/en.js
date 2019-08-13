@@ -1,3 +1,7 @@
 module.exports = {
-  TITLE: "title"
+  NAV: {
+    Home: "Home",
+    WhitePager: "White Pager",
+    Language: "Language"
+  }
 };

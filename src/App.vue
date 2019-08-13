@@ -1,16 +1,21 @@
 <template>
   <div id="app">
     <header>
-      <ul>
-        <li
-          v-for="(item,index) in Lang"
-          :key="index"
-          @click="changeLanguage(item.key)"
-        >{{item.name}}</li>
-      </ul>
+      <a href="javascript:;" class="logo"></a>
+      <div class="menu">
+        <a href="javascript:;" class="menuHome">{{$t('NAV.Home')}}</a>
+        <a href="javascript:;" class="menuWhitePager">{{$t('NAV.WhitePager')}}</a>
+        <a href="javascript:;" class="menuLanguage" @click="toggleMenu">{{$t('NAV.Language')}}</a>
+        <ul v-show="menuShow">
+          <li class="active">中文</li>
+          <li>English</li>
+        </ul>
+      </div>
     </header>
     <router-view />
-    <footer></footer>
+    <footer>
+      <span>Copyright © 2019 the NewPower Team</span>
+    </footer>
   </div>
 </template>
 
@@ -21,22 +26,15 @@ export default {
   name: "App",
   data() {
     return {
-      Lang: [
-        {
-          name: "中文",
-          key: "zh"
-        },
-        {
-          name: "English",
-          key: "en"
-        }
-      ]
+      menuShow: false
     };
   },
   methods: {
-    changeLanguage(key) {
-      this.$i18n.locale = key;
-      storage.set("LANG", key);
+    toggleMenu() {
+      this.menuShow = !this.menuShow;
+    },
+    changeLanguage(key, index) {
+      this.menuShow = false;
     }
   }
 };
@@ -45,71 +43,76 @@ export default {
 <style lang="less">
 @import "css/reset";
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: system, -apple-system, "Microsoft YaHei", "STHeiti", Arial,
+    sans-serif;
   color: #fff;
 }
+
 header {
-  max-width: 1000px;
-  height: 96px;
-  padding: 0 30px;
+  width: 1200px;
+  height: 90px;
   margin: 0 auto;
-}
-footer {
-  min-width: 1000px;
-  .footer-1 {
-    height: 63px;
-    line-height: 63px;
-    color: #6f6f6f;
-    text-align: center;
-    font-size: 16px;
-    border-bottom: 1px solid #ababab;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .logo {
+    width: 65px;
+    height: 65px;
+    display: block;
+    background: url("./assets/logo.png") 0 0 no-repeat;
   }
-  .footer-2 {
-    max-width: 600px;
-    margin: 0 auto;
-    ul {
-      display: flex;
-      height: 108px;
-      justify-content: space-between;
-      align-items: center;
-      li {
-        width: auto;
+  .menu {
+    height: 90px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    a {
+      height: 63px;
+      line-height: 63px;
+      text-align: center;
+      display: inline-block;
+      border-radius: 10px;
+      margin-left: 10px;
+      font-size: 24px;
+      &.menuHome {
+        width: 150px;
+        background-color: #1f1f1e;
+      }
+      &.menuWhitePager {
+        width: 210px;
+        background-color: #1f1f1e;
+      }
+      &.menuLanguage {
+        width: 210px;
+        background: #1f1f1e url("./assets/icon_arrow.png") 178px center
+          no-repeat;
       }
     }
-  }
-  .footer-3 {
-    color: #6f6f6f;
-    font-size: 16px;
-    text-align: center;
-    padding-bottom: 30px;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  header {
-    min-width: 100%;
-    height: 60px;
-
-    img {
-      height: 100%;
-    }
-  }
-  footer {
-    min-width: 100%;
-    .footer-2 {
-      min-width: 100%;
-      ul {
-        width: 100%;
-        height: auto;
-        padding: 20px 50px;
-        flex-wrap: wrap;
-        li {
-          width: 33%;
-          text-align: center;
-          margin-bottom: 10px;
+    ul {
+      background-color: #8b8b89;
+      border-radius: 10px;
+      position: absolute;
+      top: 90px;
+      right: 0;
+      overflow: hidden;
+      li {
+        width: 120px;
+        height: 38px;
+        line-height: 38px;
+        text-align: center;
+        &.active {
+          background-color: #678d5c;
         }
       }
     }
   }
+}
+footer {
+  height: 128px;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
 }
 </style>
