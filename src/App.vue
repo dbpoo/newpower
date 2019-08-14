@@ -8,8 +8,12 @@
           <a href="javascript:;" class="menuWhitePager">{{$t('NAV.WhitePager')}}</a>
           <a href="javascript:;" class="menuLanguage" @click="toggleMenu">{{$t('NAV.Language')}}</a>
           <ul v-show="menuShow">
-            <li :class="lang == 'zh'?'active' :''">中文</li>
-            <li :class="lang == 'en'?'active' :''">English</li>
+            <li :class="lang == 'zh'?'active' :''">
+              <a href="./index.html">中文</a>
+            </li>
+            <li :class="lang == 'en'?'active' :''">
+              <a href="./index_en.html">English</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -111,6 +115,16 @@ header {
           height: 38px;
           line-height: 38px;
           text-align: center;
+          a {
+            width: 100%;
+            font-size: 18px;
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+            display: inline-block;
+            border-radius: 0;
+            margin-left: 0;
+          }
           &.active {
             background-color: #678d5c;
           }
