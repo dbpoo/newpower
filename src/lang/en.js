@@ -37,12 +37,12 @@ module.exports = {
     {
       tit: "Assetization of New Energy Projects",
       con:
-        "New energy projects are embedded with investment value. On NewPower platform, new energy projects can be assetized and traded to maximize the projects’ value."
+        "New energy projects are embedded with investment value. On NewPower platform, new energy projects can be assetized and traded to maximize the projects’value."
     },
     {
       tit: "Trusted Data Exchange",
       con:
-        "NewPower platform is based on blockchain technology to ensure data credibility, security, and immutability. NewPower can break down the data silos and realize decentralized & secure data exchange model to ensure the data owners’ rights."
+        "NewPower platform is based on blockchain technology to ensure data credibility, security, and immutability. NewPower can break down the data silos and realize decentralized & secure data exchange model to ensure the data owners’rights."
     },
     {
       tit: "Reputation Security System",

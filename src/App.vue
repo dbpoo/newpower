@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class="lang">
     <header>
       <div class="inner-wrap">
         <a href="javascript:;" class="logo"></a>
@@ -57,6 +57,7 @@ header {
   height: 90px;
   top: 0;
   left: 0;
+  z-index: 999;
   background-color: #000;
   .inner-wrap {
     width: 1920px;

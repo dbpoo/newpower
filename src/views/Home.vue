@@ -339,16 +339,16 @@ export default {
           border-radius: 50%;
         }
         i.i1 {
-          background:#fff url("../assets/icon1.png") 0 0 no-repeat;
+          background: #fff url("../assets/icon1.png") 0 0 no-repeat;
         }
         i.i2 {
-          background:#fff url("../assets/icon2.png") 0 0 no-repeat;
+          background: #fff url("../assets/icon2.png") 0 0 no-repeat;
         }
         i.i3 {
-          background:#fff url("../assets/icon3.png") 0 0 no-repeat;
+          background: #fff url("../assets/icon3.png") 0 0 no-repeat;
         }
         i.i4 {
-          background:#fff url("../assets/icon4.png") 0 0 no-repeat;
+          background: #fff url("../assets/icon4.png") 0 0 no-repeat;
         }
       }
       .tit {
@@ -465,5 +465,16 @@ export default {
 
 /deep/.vjs-button > .vjs-icon-placeholder:before {
   font-size: 22px;
+}
+
+.en {
+  .col-4 .box a.item .tit {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .col-4 .box a.item .con {
+    font-size: 16px;
+    line-height: 1.4;
+  }
 }
 </style>
