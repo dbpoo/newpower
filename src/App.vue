@@ -8,8 +8,8 @@
           <a href="javascript:;" class="menuWhitePager">{{$t('NAV.WhitePager')}}</a>
           <a href="javascript:;" class="menuLanguage" @click="toggleMenu">{{$t('NAV.Language')}}</a>
           <ul v-show="menuShow">
-            <li class="active">中文</li>
-            <li>English</li>
+            <li :class="lang == 'zh'?'active' :''">中文</li>
+            <li :class="lang == 'en'?'active' :''">English</li>
           </ul>
         </div>
       </div>
@@ -28,7 +28,8 @@ export default {
   name: "App",
   data() {
     return {
-      menuShow: false
+      menuShow: false,
+      lang: window.LANG
     };
   },
   methods: {

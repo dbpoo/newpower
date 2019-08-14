@@ -28,7 +28,28 @@ module.exports = {
   ],
   COL1:
     "Blockchain platform for the new energy assets’ registry, issuance, and trading.",
-  COL4: {},
+  COL4: [
+    {
+      tit: "Comprehensive Coverage of the New Energy Industry",
+      con:
+        "The new energy industry’s network will correspond with NewPower platform’s architecture. Links will be forged among central (main) blockchain networks of different countries or regions, local network on the national or regional level, and project networks related to new energy projects."
+    },
+    {
+      tit: "Assetization of New Energy Projects",
+      con:
+        "New energy projects are embedded with investment value. On NewPower platform, new energy projects can be assetized and traded to maximize the projects’ value."
+    },
+    {
+      tit: "Trusted Data Exchange",
+      con:
+        "NewPower platform is based on blockchain technology to ensure data credibility, security, and immutability. NewPower can break down the data silos and realize decentralized & secure data exchange model to ensure the data owners’ rights."
+    },
+    {
+      tit: "Reputation Security System",
+      con:
+        "A reputation value system of the new energy industry is built by virtue of the introduction of an algorithm measuring reputation and the mechanism to monitor, verify, and incentivize the reputation. The overall reputation of NewPower platform can be improved, which can also facilitate the long-term development of the entire new energy industry."
+    }
+  ],
   COL5:
     "NewPowerCoin (NPC) is the token issued by NewPower. It will function as the fuel for the entire new energy ecosystem to maintain the healthy operation of the central NewPower blockchain network and value exchanges conducted in the ecosystem."
 };
