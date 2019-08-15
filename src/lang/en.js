@@ -8,7 +8,7 @@ module.exports = {
     {
       tit: "New Energy Assets Registry",
       con:
-        "A fundamental application of the blockchain platform. A decentralized management platform for new energy projects’ development information & contracts is built on the NewPower Chain. It can support functions like development info registry on the blockchain, development workflow management, contracts management, data management, projects operation & maintenance, supply chain management and so on."
+        "A fundamental application of the blockchain platform. A decentralized management platform for new energy projects'development information & contracts is built on the NewPower Chain. It can support functions like development info registry on the blockchain, development workflow management, contracts management, data management, projects operation & maintenance, supply chain management and so on."
     },
     {
       tit: "New Energy Assets Trading",
@@ -18,7 +18,7 @@ module.exports = {
     {
       tit: "P2P Electricity Trading",
       con:
-        "All ‘electricity-sales’ and ‘electricity-consumption’ nodes on the microgrid will be interconnected to form a mapping blockchain network. A trading model can be defined in the P2P electricity trading smart contract, which can control the trading procedures, electricity selling price and support trading with stablecoins."
+        "All 'electricity-sales' and 'electricity-consumption' nodes on the microgrid will be interconnected to form a mapping blockchain network. A trading model can be defined in the P2P electricity trading smart contract, which can control the trading procedures, electricity selling price and support trading with stablecoins."
     },
     {
       tit: "Carbon Emissions Trading",
@@ -27,22 +27,22 @@ module.exports = {
     }
   ],
   COL1:
-    "Blockchain platform for the new energy assets’ registry, issuance, and trading.",
+    "Platform to register, issue, and trade new energy assets.",
   COL4: [
     {
       tit: "Comprehensive Coverage of the New Energy Industry",
       con:
-        "The new energy industry’s network will correspond with NewPower platform’s architecture. Links will be forged among central (main) blockchain networks of different countries or regions, local network on the national or regional level, and project networks related to new energy projects."
+        "The new energy industry's network will correspond with NewPower platform's architecture. Links will be forged among central (main) blockchain networks of different countries or regions, local network on the national or regional level, and project networks related to new energy projects."
     },
     {
       tit: "Assetization of New Energy Projects",
       con:
-        "New energy projects are embedded with investment value. On NewPower platform, new energy projects can be assetized and traded to maximize the projects’value."
+        "New energy projects are embedded with investment value. On NewPower platform, new energy projects can be assetized and traded to maximize the projects'value."
     },
     {
       tit: "Trusted Data Exchange",
       con:
-        "NewPower platform is based on blockchain technology to ensure data credibility, security, and immutability. NewPower can break down the data silos and realize decentralized & secure data exchange model to ensure the data owners’rights."
+        "NewPower platform is based on blockchain technology to ensure data credibility, security, and immutability. NewPower can break down the data silos and realize decentralized & secure data exchange model to ensure the data owners'rights."
     },
     {
       tit: "Reputation Security System",

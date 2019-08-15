@@ -15,7 +15,7 @@
       <div class="inner-wrap">
         <swiper :options="swiperOption" class="swiper-container">
           <swiper-slide class="box">
-            <div class="img-0"></div>
+            <div class="img-0"><i></i></div>
             <div class="line"></div>
             <div class="word">
               <div class="tit">{{$t('SWIPER[0].tit')}}</div>
@@ -23,7 +23,7 @@
             </div>
           </swiper-slide>
           <swiper-slide class="box">
-            <div class="img-1"></div>
+            <div class="img-1"><i></i></div>
             <div class="line"></div>
             <div class="word">
               <div class="tit">{{$t('SWIPER[1].tit')}}</div>
@@ -31,7 +31,7 @@
             </div>
           </swiper-slide>
           <swiper-slide class="box">
-            <div class="img-2"></div>
+            <div class="img-2"><i></i></div>
             <div class="line"></div>
             <div class="word">
               <div class="tit">{{$t('SWIPER[2].tit')}}</div>
@@ -39,7 +39,7 @@
             </div>
           </swiper-slide>
           <swiper-slide class="box">
-            <div class="img-3"></div>
+            <div class="img-3"><i></i></div>
             <div class="line"></div>
             <div class="word">
               <div class="tit">{{$t('SWIPER[3].tit')}}</div>
@@ -65,6 +65,7 @@
       </div>
     </div>
     <div class="col-4">
+      <div class="bg"></div>
       <div class="inner-wrap">
         <div class="box">
           <a href="javascript:;" class="item">
@@ -256,22 +257,42 @@ export default {
     .img-1,
     .img-2,
     .img-3 {
-      width: 390px;
-      height: 390px;
+      width: 387px;
+      height: 387px;
       flex: 0 0 auto;
+      display: flex;
+      justify-content: center;
+      padding-top: 60px;
+      i {
+        width: 240px;
+        height: 240px;
+      }
     }
     .img-0 {
-      background: url("../assets/swiper_0.png") 0 0 no-repeat;
+      background: url("../assets/swipericonbg.png") 0 -387px no-repeat;
+      i {
+        background: url("../assets/swiper_0.png") 0 0 no-repeat;
+      }
     }
     .img-1 {
-      background: url("../assets/swiper_0.png") 0 0 no-repeat;
+      background: url("../assets/swipericonbg.png") 0 -387px no-repeat;
+      i {
+        background: url("../assets/swiper_1.png") 0 0 no-repeat;
+      }
     }
     .img-2 {
-      background: url("../assets/swiper_0.png") 0 0 no-repeat;
+      background: url("../assets/swipericonbg.png") 0 -387px no-repeat;
+      i {
+        background: url("../assets/swiper_2.png") 0 0 no-repeat;
+      }
     }
     .img-3 {
-      background: url("../assets/swiper_0.png") 0 0 no-repeat;
+      background: url("../assets/swipericonbg.png") 0 -387px no-repeat;
+      i {
+        background: url("../assets/swiper_3.png") 0 0 no-repeat;
+      }
     }
+    
     .line {
       margin: 0 54px;
       width: 10px;
@@ -288,14 +309,24 @@ export default {
       }
       .con {
         font-size: 18px;
-        text-indent: 36px;
         line-height: 1.8;
+      }
+    }
+    &:hover {
+      .img-0,
+      .img-1,
+      .img-2,
+      .img-3 {
+        background-position: 0 0;
+        i {
+          background-position: 0 -240px;
+        }
       }
     }
   }
 }
 .col-3 {
-  height: 1092px;
+  height: 1000px;
   padding-top: 90px;
   .videobox {
     width: 1200px;
@@ -310,20 +341,27 @@ export default {
   }
 }
 .col-4 {
-  height: 690px;
-  background-color: #1b1b1b;
+  position: relative;
   .inner-wrap {
     position: relative;
   }
+  .bg {
+    position: absolute;
+    top: 180px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #1b1b1b;
+    z-index: 0;
+  }
   .box {
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    position: absolute;
-    top: -160px;
+    padding-bottom: 100px;
     a.item {
       width: 590px;
-      height: 370px;
       background-color: rgba(0, 0, 0, 0.5);
       margin-bottom: 20px;
       padding: 0 35px;
@@ -359,6 +397,7 @@ export default {
       .con {
         font-size: 18px;
         line-height: 1.8;
+        padding-bottom: 50px;
       }
       &:hover {
         .icon {
@@ -465,16 +504,5 @@ export default {
 
 /deep/.vjs-button > .vjs-icon-placeholder:before {
   font-size: 22px;
-}
-
-.en {
-  .col-4 .box a.item .tit {
-    font-size: 20px;
-    line-height: 1.2;
-  }
-  .col-4 .box a.item .con {
-    font-size: 16px;
-    line-height: 1.4;
-  }
 }
 </style>

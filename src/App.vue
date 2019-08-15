@@ -6,15 +6,17 @@
         <div class="menu">
           <a href="javascript:;" class="menuHome">{{$t('NAV.Home')}}</a>
           <a href="javascript:;" class="menuWhitePager">{{$t('NAV.WhitePager')}}</a>
-          <a href="javascript:;" class="menuLanguage" @click="toggleMenu">{{$t('NAV.Language')}}</a>
-          <ul v-show="menuShow">
-            <li :class="lang == 'zh'?'active' :''">
-              <a href="./index.html">中文</a>
-            </li>
-            <li :class="lang == 'en'?'active' :''">
-              <a href="./index_en.html">English</a>
-            </li>
-          </ul>
+          <div class="menuLanguage">
+            {{$t('NAV.Language')}}
+            <ul>
+              <li :class="lang == 'zh'?'active' :''">
+                <a href="./index.html">中文</a>
+              </li>
+              <li :class="lang == 'en'?'active' :''">
+                <a href="./index_en.html">English</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -37,9 +39,6 @@ export default {
     };
   },
   methods: {
-    toggleMenu() {
-      this.menuShow = !this.menuShow;
-    },
     changeLanguage(key, index) {
       this.menuShow = false;
     }
@@ -64,12 +63,13 @@ header {
   z-index: 999;
   background-color: #000;
   .inner-wrap {
-    width: 1920px;
+    max-width: 1200px;
     height: 90px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 20px;
     .logo {
       width: 65px;
       height: 65px;
@@ -97,36 +97,50 @@ header {
           width: 210px;
           background-color: #1f1f1e;
         }
-        &.menuLanguage {
-          width: 210px;
-          background: #1f1f1e url("./assets/icon_arrow.png") 178px center
-            no-repeat;
-        }
       }
-      ul {
-        background-color: #8b8b89;
+      .menuLanguage {
+        width: 210px;
+        height: 63px;
+        line-height: 63px;
+        text-align: center;
+        display: inline-block;
         border-radius: 10px;
-        position: absolute;
-        top: 90px;
-        right: 0;
-        overflow: hidden;
-        li {
-          width: 120px;
-          height: 38px;
-          line-height: 38px;
-          text-align: center;
-          a {
-            width: 100%;
-            font-size: 18px;
+        margin-left: 10px;
+        font-size: 24px;
+        background: #1f1f1e url("./assets/icon_arrow.png") 178px center
+          no-repeat;
+        position: relative;
+        ul {
+          background-color: #8b8b89;
+          border-radius: 10px;
+          position: absolute;
+          top: 63px;
+          right: 0;
+          overflow: hidden;
+          display: none;
+          li {
+            width: 120px;
             height: 38px;
             line-height: 38px;
             text-align: center;
-            display: inline-block;
-            border-radius: 0;
-            margin-left: 0;
+            a {
+              width: 100%;
+              font-size: 18px;
+              height: 38px;
+              line-height: 38px;
+              text-align: center;
+              display: inline-block;
+              border-radius: 0;
+              margin-left: 0;
+            }
+            &.active {
+              background-color: #678d5c;
+            }
           }
-          &.active {
-            background-color: #678d5c;
+        }
+        &:hover {
+          ul {
+            display: block;
           }
         }
       }
