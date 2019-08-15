@@ -65,7 +65,7 @@
       </div>
     </div>
     <div class="col-4">
-      <div class="bg"></div>
+      <!-- <div class="bg"></div> -->
       <div class="inner-wrap">
         <div class="box">
           <a href="javascript:;" class="item">
@@ -210,7 +210,7 @@ export default {
 
 <style scoped lang="less">
 .home {
-  max-width: 1920px;
+  width: 100%;
   margin: 0 auto;
   background: url("../assets/bg_03.jpg") center 0 no-repeat;
   background-attachment: fixed;
@@ -221,7 +221,7 @@ export default {
 }
 .col-1 {
   height: 840px;
-  background: url("../assets/bg_01.jpg") 0 0 no-repeat;
+  background: #090908 url("../assets/bg_01.jpg") center 0 no-repeat;
   .word {
     padding-top: 360px;
     .tit {
@@ -243,7 +243,7 @@ export default {
 }
 .col-2 {
   height: 730px;
-  background: url("../assets/bg_02.jpg") 0 0 no-repeat;
+  background:#090908 url("../assets/bg_02.jpg") center 0 no-repeat;
   padding-top: 120px;
   .swiper-container {
     padding-bottom: 100px;
@@ -345,15 +345,15 @@ export default {
   .inner-wrap {
     position: relative;
   }
-  .bg {
-    position: absolute;
-    top: 180px;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: #1b1b1b;
-    z-index: 0;
-  }
+  // .bg {
+  //   position: absolute;
+  //   top: 180px;
+  //   left: 0;
+  //   bottom: 0;
+  //   right: 0;
+  //   background-color: #1b1b1b;
+  //   z-index: 0;
+  // }
   .box {
     z-index: 1;
     display: flex;
@@ -412,7 +412,7 @@ export default {
 }
 .col-5 {
   height: 600px;
-  background: url("../assets/bg_04.jpg") 0 0 no-repeat;
+  background:#090908 url("../assets/bg_04.jpg") 0 0 no-repeat;
   .word {
     width: 600px;
     padding-top: 220px;
