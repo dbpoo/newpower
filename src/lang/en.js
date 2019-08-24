@@ -2,6 +2,8 @@ module.exports = {
   NAV: {
     Home: "Home",
     WhitePager: "White Pager",
+    News: "News",
+    About: "About",
     Language: "Language"
   },
   SWIPER: [
@@ -27,7 +29,7 @@ module.exports = {
     }
   ],
   COL1:
-    "Platform to register, issue, and trade new energy assets.",
+    "Ecological Construction",
   COL4: [
     {
       tit: "Comprehensive Coverage of the New Energy Industry",

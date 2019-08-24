@@ -4,8 +4,10 @@
       <div class="inner-wrap">
         <a href="javascript:;" class="logo"></a>
         <div class="menu">
-          <a href="javascript:;" class="menuHome">{{$t('NAV.Home')}}</a>
-          <a href="javascript:;" class="menuWhitePager">{{$t('NAV.WhitePager')}}</a>
+          <a href="javascript:;" class="menuHome hvr-underline-from-left">{{$t('NAV.Home')}}</a>
+          <a href="javascript:;" class="menuWhitePager hvr-underline-from-left">{{$t('NAV.WhitePager')}}</a>
+          <a href="javascript:;" class="menuWhitePager hvr-underline-from-left">{{$t('NAV.News')}}</a>
+          <a href="javascript:;" class="menuWhitePager hvr-underline-from-left">{{$t('NAV.About')}}</a>
           <div class="menuLanguage">
             {{$t('NAV.Language')}}
             <ul>
@@ -28,8 +30,6 @@
 </template>
 
 <script>
-import storage from "good-storage";
-
 export default {
   name: "App",
   data() {
@@ -48,6 +48,7 @@ export default {
 
 <style lang="less">
 @import "css/reset";
+@import "css/hover";
 #app {
   font-family: system, -apple-system, "Microsoft YaHei", "STHeiti", Arial,
     sans-serif;
@@ -82,39 +83,28 @@ header {
       display: flex;
       align-items: center;
       a {
-        height: 63px;
-        line-height: 63px;
         text-align: center;
         display: inline-block;
-        border-radius: 10px;
-        margin-left: 10px;
-        font-size: 24px;
-        &.menuHome {
-          width: 150px;
-          background-color: #1f1f1e;
-        }
-        &.menuWhitePager {
-          width: 210px;
-          background-color: #1f1f1e;
-        }
+        margin: 0 10px;
+        padding: 10px;
+        font-size: 18px;
       }
       .menuLanguage {
-        width: 210px;
-        height: 63px;
-        line-height: 63px;
+        height: 90px;
+        line-height: 90px;
+        margin: 0 30px 0 10px;
+        padding-right: 30px;
         text-align: center;
         display: inline-block;
-        border-radius: 10px;
-        margin-left: 10px;
-        font-size: 24px;
-        background: #1f1f1e url("./assets/icon_arrow.png") 178px center
+        font-size: 18px;
+        background: url("./assets/icon_arrow.png") right center
           no-repeat;
         position: relative;
         ul {
           background-color: #8b8b89;
           border-radius: 10px;
           position: absolute;
-          top: 63px;
+          top: 90px;
           right: 0;
           overflow: hidden;
           display: none;
@@ -125,13 +115,14 @@ header {
             text-align: center;
             a {
               width: 100%;
-              font-size: 18px;
+              font-size: 16px;
               height: 38px;
               line-height: 38px;
               text-align: center;
               display: inline-block;
               border-radius: 0;
-              margin-left: 0;
+              margin: 0;
+              padding: 0;
             }
             &.active {
               background-color: #678d5c;

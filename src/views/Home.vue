@@ -15,7 +15,9 @@
       <div class="inner-wrap">
         <swiper :options="swiperOption" class="swiper-container">
           <swiper-slide class="box">
-            <div class="img-0"><i></i></div>
+            <div class="img-0">
+              <i></i>
+            </div>
             <div class="line"></div>
             <div class="word">
               <div class="tit">{{$t('SWIPER[0].tit')}}</div>
@@ -23,7 +25,9 @@
             </div>
           </swiper-slide>
           <swiper-slide class="box">
-            <div class="img-1"><i></i></div>
+            <div class="img-1">
+              <i></i>
+            </div>
             <div class="line"></div>
             <div class="word">
               <div class="tit">{{$t('SWIPER[1].tit')}}</div>
@@ -31,7 +35,9 @@
             </div>
           </swiper-slide>
           <swiper-slide class="box">
-            <div class="img-2"><i></i></div>
+            <div class="img-2">
+              <i></i>
+            </div>
             <div class="line"></div>
             <div class="word">
               <div class="tit">{{$t('SWIPER[2].tit')}}</div>
@@ -39,7 +45,9 @@
             </div>
           </swiper-slide>
           <swiper-slide class="box">
-            <div class="img-3"><i></i></div>
+            <div class="img-3">
+              <i></i>
+            </div>
             <div class="line"></div>
             <div class="word">
               <div class="tit">{{$t('SWIPER[3].tit')}}</div>
@@ -220,13 +228,17 @@ export default {
   margin: 0 auto;
 }
 .col-1 {
+  overflow: hidden;
   height: 840px;
   background: #090908 url("../assets/bg_01.jpg") center 0 no-repeat;
   .word {
-    padding-top: 360px;
+    width: 918px;
+    height: 172px;
+    margin-top: 360px;
+    background: url("../assets/txtbg.png") center 0 no-repeat;
+    padding-left: 10px;
     .tit {
-      font-size: 80px;
-      margin-bottom: 30px;
+      font-size: 70px;
       .sp1 {
         color: #7fca70;
       }
@@ -243,7 +255,7 @@ export default {
 }
 .col-2 {
   height: 730px;
-  background:#090908 url("../assets/bg_02.jpg") center 0 no-repeat;
+  background: #090908 url("../assets/bg_02.jpg") center 0 no-repeat;
   padding-top: 120px;
   .swiper-container {
     padding-bottom: 100px;
@@ -292,7 +304,7 @@ export default {
         background: url("../assets/swiper_3.png") 0 0 no-repeat;
       }
     }
-    
+
     .line {
       margin: 0 54px;
       width: 10px;
@@ -330,13 +342,13 @@ export default {
   padding-top: 90px;
   .videobox {
     width: 1200px;
-    height: 762px;
-    background: url("../assets/videobg.png") 0 0 no-repeat;
+    height: 714px;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
     .video-player {
-      width: 1090px;
+      width: 1137px;
     }
   }
 }
@@ -412,7 +424,7 @@ export default {
 }
 .col-5 {
   height: 600px;
-  background:#090908 url("../assets/bg_04.jpg") 0 0 no-repeat;
+  background: #090908 url("../assets/bg_04.jpg") 0 0 no-repeat;
   .word {
     width: 600px;
     padding-top: 220px;
@@ -435,7 +447,6 @@ export default {
   }
 }
 .col-6 {
-  background-color: #1b1b1b;
   padding: 130px 0 110px 0;
   .inner-wrap {
     display: flex;
@@ -496,6 +507,18 @@ export default {
   margin-top: -93px;
   margin-left: -93px;
   outline: none;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+/deep/.video-js .vjs-big-play-button:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /deep/.video-js .vjs-big-play-button .vjs-icon-placeholder {
