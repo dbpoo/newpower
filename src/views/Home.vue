@@ -33,6 +33,7 @@
         ></vue-particles>
       </div>
       <div class="inner-wrap">
+        <div class="col-tit"><span>NEWPOWER</span> {{$t('COL2_tit')}}</div>
         <swiper :options="swiperOption" class="swiper-container">
           <swiper-slide class="box">
             <div class="img-0">
@@ -95,6 +96,7 @@
     <div class="col-4">
       <!-- <div class="bg"></div> -->
       <div class="inner-wrap">
+        <div class="col-tit"><span>NEWPOWER</span> {{$t('COL4_tit')}}</div>
         <div class="box">
           <a href="javascript:;" class="item">
             <div class="icon">
@@ -300,7 +302,6 @@ export default {
 .col-2 {
   height: 730px;
   background: #090908 url("../assets/bg_02.jpg") center 0 no-repeat;
-  padding-top: 120px;
   position: relative;
   .canvas-bg {
     width: 100%;
@@ -391,7 +392,7 @@ export default {
   }
 }
 .col-3 {
-  height: 1000px;
+  height: 900px;
   padding-top: 90px;
   .videobox {
     width: 1200px;
@@ -427,31 +428,36 @@ export default {
     padding-bottom: 100px;
     a.item {
       width: 590px;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.7);
       margin-bottom: 20px;
       padding: 0 35px;
+      transition: all .5s;
+      &:hover {
+        color: #fff;
+        background-color: rgba(126, 199, 111, 0.7);
+      }
       .icon {
         height: 180px;
         display: flex;
         align-items: center;
         justify-content: center;
         i {
-          width: 115px;
-          height: 115px;
+          width: 330px;
+          height: 180px;
           display: block;
           border-radius: 50%;
         }
         i.i1 {
-          background: #fff url("../assets/icon1.png") 0 0 no-repeat;
+          background: url("../assets/icon1.png") 0 0 no-repeat;
         }
         i.i2 {
-          background: #fff url("../assets/icon2.png") 0 0 no-repeat;
+          background: url("../assets/icon2.png") 0 0 no-repeat;
         }
         i.i3 {
-          background: #fff url("../assets/icon3.png") 0 0 no-repeat;
+          background: url("../assets/icon3.png") 0 0 no-repeat;
         }
         i.i4 {
-          background: #fff url("../assets/icon4.png") 0 0 no-repeat;
+          background: url("../assets/icon4.png") 0 0 no-repeat;
         }
       }
       .tit {
@@ -464,21 +470,13 @@ export default {
         line-height: 1.8;
         padding-bottom: 50px;
       }
-      &:hover {
-        .icon {
-          i {
-            background-color: #7ec76f;
-            background-position: 0 -115px;
-          }
-        }
-      }
     }
   }
 }
 .col-5 {
   height: 600px;
   position: relative;
-  background-color: #000;
+  background: #000000 url("../assets/bg_04.jpg") center 0 no-repeat;
   .canvas-bg {
     width: 100%;
     height: 600px;
@@ -517,6 +515,15 @@ export default {
     &:after {
       width: 30%;
     }
+  }
+}
+
+.col-tit {
+  text-align: center;
+  font-size: 30px;
+  padding: 50px 0;
+  span {
+    color: #7ec76f;
   }
 }
 

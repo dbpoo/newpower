@@ -6,6 +6,8 @@ module.exports = {
     About: "关于",
     Language: "语言"
   },
+  COL2_tit: "生态建设",
+  COL4_tit: "平台优势",
   SWIPER: [
     {
       tit: "新能源资产上链",

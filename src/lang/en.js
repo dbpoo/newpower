@@ -6,6 +6,8 @@ module.exports = {
     About: "About",
     Language: "Language"
   },
+  COL2_tit: "Ecological Construction",
+  COL4_tit: "Platform Advantages",
   SWIPER: [
     {
       tit: "New Energy Assets Registry",
@@ -29,7 +31,7 @@ module.exports = {
     }
   ],
   COL1:
-    "Ecological Construction",
+    "Platform to register, issue, and trade new energy assets.",
   COL4: [
     {
       tit: "Comprehensive Coverage of the New Energy Industry",
