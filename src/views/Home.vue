@@ -33,7 +33,10 @@
         ></vue-particles>
       </div>
       <div class="inner-wrap">
-        <div class="col-tit"><span>NEWPOWER</span> {{$t('COL2_tit')}}</div>
+        <div class="col-tit">
+          <span>NEWPOWER</span>
+          {{$t('COL2_tit')}}
+        </div>
         <swiper :options="swiperOption" class="swiper-container">
           <swiper-slide class="box">
             <div class="img-0">
@@ -96,7 +99,10 @@
     <div class="col-4">
       <!-- <div class="bg"></div> -->
       <div class="inner-wrap">
-        <div class="col-tit"><span>NEWPOWER</span> {{$t('COL4_tit')}}</div>
+        <div class="col-tit">
+          <span>NEWPOWER</span>
+          {{$t('COL4_tit')}}
+        </div>
         <div class="box">
           <a href="javascript:;" class="item">
             <div class="icon">
@@ -269,10 +275,7 @@ export default {
   background: url("../assets/bg_03.jpg") center 0 no-repeat;
   background-attachment: fixed;
 }
-.inner-wrap {
-  width: 1200px;
-  margin: 0 auto;
-}
+
 .col-1 {
   overflow: hidden;
   height: 840px;
@@ -281,7 +284,7 @@ export default {
     width: 918px;
     height: 172px;
     margin-top: 360px;
-    background: url("../assets/txtbg.png") center 0 no-repeat;
+    background: url("../assets/txtbg.png") 0 0 no-repeat;
     padding-left: 10px;
     .tit {
       font-size: 70px;
@@ -295,7 +298,7 @@ export default {
     }
     .con {
       color: #ececec;
-      font-size: 40px;
+      font-size: 32px;
     }
   }
 }
@@ -323,40 +326,25 @@ export default {
     .img-1,
     .img-2,
     .img-3 {
-      width: 387px;
-      height: 387px;
+      width: 420px;
+      height: 420px;
       flex: 0 0 auto;
       display: flex;
       justify-content: center;
       padding-top: 60px;
-      i {
-        width: 240px;
-        height: 240px;
-      }
+      transition: all 0.5s;
     }
     .img-0 {
-      background: url("../assets/swipericonbg.png") 0 -387px no-repeat;
-      i {
-        background: url("../assets/swiper_0.png") 0 0 no-repeat;
-      }
+      background: url("../assets/swiper_0.png") 0 0 no-repeat;
     }
     .img-1 {
-      background: url("../assets/swipericonbg.png") 0 -387px no-repeat;
-      i {
-        background: url("../assets/swiper_1.png") 0 0 no-repeat;
-      }
+      background: url("../assets/swiper_1.png") 0 0 no-repeat;
     }
     .img-2 {
-      background: url("../assets/swipericonbg.png") 0 -387px no-repeat;
-      i {
-        background: url("../assets/swiper_2.png") 0 0 no-repeat;
-      }
+      background: url("../assets/swiper_2.png") 0 0 no-repeat;
     }
     .img-3 {
-      background: url("../assets/swipericonbg.png") 0 -387px no-repeat;
-      i {
-        background: url("../assets/swiper_3.png") 0 0 no-repeat;
-      }
+      background: url("../assets/swiper_3.png") 0 0 no-repeat;
     }
 
     .line {
@@ -378,15 +366,24 @@ export default {
         line-height: 1.8;
       }
     }
-    &:hover {
-      .img-0,
-      .img-1,
-      .img-2,
-      .img-3 {
-        background-position: 0 0;
-        i {
-          background-position: 0 -240px;
-        }
+    .img-0 {
+      &:hover {
+        background: url("../assets/swiper_0_hover.png") 0 0 no-repeat;
+      }
+    }
+    .img-1 {
+      &:hover {
+        background: url("../assets/swiper_1_hover.png") 0 0 no-repeat;
+      }
+    }
+    .img-2 {
+      &:hover {
+        background: url("../assets/swiper_2_hover.png") 0 0 no-repeat;
+      }
+    }
+    .img-3 {
+      &:hover {
+        background: url("../assets/swiper_3_hover.png") 0 0 no-repeat;
       }
     }
   }
@@ -431,7 +428,7 @@ export default {
       background-color: rgba(0, 0, 0, 0.7);
       margin-bottom: 20px;
       padding: 0 35px;
-      transition: all .5s;
+      transition: all 0.5s;
       &:hover {
         color: #fff;
         background-color: rgba(126, 199, 111, 0.7);

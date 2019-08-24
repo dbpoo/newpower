@@ -5,7 +5,10 @@
         <a href="javascript:;" class="logo"></a>
         <div class="menu">
           <a href="javascript:;" class="menuHome hvr-underline-from-left">{{$t('NAV.Home')}}</a>
-          <a href="javascript:;" class="menuWhitePager hvr-underline-from-left">{{$t('NAV.WhitePager')}}</a>
+          <a
+            href="javascript:;"
+            class="menuWhitePager hvr-underline-from-left"
+          >{{$t('NAV.WhitePager')}}</a>
           <a href="javascript:;" class="menuWhitePager hvr-underline-from-left">{{$t('NAV.News')}}</a>
           <a href="javascript:;" class="menuWhitePager hvr-underline-from-left">{{$t('NAV.About')}}</a>
           <div class="menuLanguage">
@@ -24,7 +27,25 @@
     </header>
     <router-view />
     <footer>
-      <span>Copyright © 2019 the NewPower Team</span>
+      <div class="inner-wrap">
+        <div class="footer-logo">
+          <a href="#" class="logo"></a>
+        </div>
+        <div class="footer-link">
+          <div class="footer-link-icon">
+            <a href="#" target="_blank" class="icon-weixin"></a>
+            <a
+              href="https://weibo.com/newpowerchain?sudaref=s.weibo.com&display=0&retcode=6102"
+              target="_blank"
+              class="icon-weibo"
+            ></a>
+            <a href="https://www.facebook.com/power.new.399" target="_blank" class="icon-facebook"></a>
+            <a href="#" target="_blank" class="icon-twitter"></a>
+            <a href="#" target="_blank" class="icon-ln"></a>
+          </div>
+          <div class="footer-link-copyright">Copyright © 2019 the NewPower Team</div>
+        </div>
+      </div>
     </footer>
   </div>
 </template>
@@ -55,6 +76,11 @@ export default {
   color: #fff;
 }
 
+.inner-wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 header {
   width: 100%;
   position: fixed;
@@ -72,8 +98,8 @@ header {
     justify-content: space-between;
     padding: 0 20px;
     .logo {
-      width: 65px;
-      height: 65px;
+      width: 299px;
+      height: 90px;
       display: block;
       background: url("./assets/logo.png") 0 0 no-repeat;
     }
@@ -97,8 +123,7 @@ header {
         text-align: center;
         display: inline-block;
         font-size: 18px;
-        background: url("./assets/icon_arrow.png") right center
-          no-repeat;
+        background: url("./assets/icon_arrow.png") right center no-repeat;
         position: relative;
         ul {
           background-color: #8b8b89;
@@ -138,12 +163,60 @@ header {
     }
   }
 }
+
 footer {
-  height: 128px;
-  background-color: #000000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
+  .inner-wrap {
+    height: 200px;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-logo {
+    width: 81px;
+    height: 81px;
+    a {
+      width: 81px;
+      height: 81px;
+      display: block;
+      background: url("./assets/logo_ft.png") 0 0 no-repeat;
+    }
+  }
+  .footer-link {
+    display: flex;
+    flex-direction: column;
+    .footer-link-icon {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-bottom: 10px;
+      a {
+        width: 40px;
+        height: 40px;
+        display: block;
+        margin: 0 15px;
+      }
+      a.icon-weixin {
+        background: url("./assets/icon_weixin.png") 0 0 no-repeat;
+      }
+      a.icon-weibo {
+        background: url("./assets/icon_weibo.png") 0 0 no-repeat;
+      }
+      a.icon-facebook {
+        background: url("./assets/icon_facebook.png") 0 0 no-repeat;
+      }
+      a.icon-twitter {
+        background: url("./assets/icon_twitter.png") 0 0 no-repeat;
+      }
+      a.icon-ln {
+        background: url("./assets/icon_ln.png") 0 0 no-repeat;
+      }
+    }
+    .footer-link-copyright {
+      text-align: right;
+      font-size: 20px;
+      color: #b0b0b0;
+    }
+  }
 }
 </style>
