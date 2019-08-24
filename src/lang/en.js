@@ -6,8 +6,8 @@ module.exports = {
     About: "About",
     Language: "Language"
   },
-  COL2_tit: "Ecological Construction",
-  COL4_tit: "Platform Advantages",
+  COL2_tit: "ECOLOGICAL CONSTRUCTION",
+  COL4_tit: "PLATFORM ADVANTAGES",
   SWIPER: [
     {
       tit: "New Energy Assets Registry",
