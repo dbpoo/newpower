@@ -88,7 +88,7 @@ header {
   top: 0;
   left: 0;
   z-index: 999;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.8);
   .inner-wrap {
     max-width: 1200px;
     height: 90px;

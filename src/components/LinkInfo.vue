@@ -28,7 +28,7 @@ export default {
 .linkinfo {
   width: 30%;
   height: 297px;
-  background-color: #080808;
+  background-color: rgba(8,8,8,.8);
   margin-bottom: 50px;
 }
 
@@ -37,7 +37,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #252525;
+  background-color: rgba(37,37,37,.8);
   img {
     border-radius: 50%;
   }

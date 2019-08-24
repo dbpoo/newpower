@@ -100,8 +100,10 @@
       <!-- <div class="bg"></div> -->
       <div class="inner-wrap">
         <div class="col-tit">
-          <span>NEWPOWER</span>
-          {{$t('COL4_tit')}}
+          <div class="txt-bg">
+            <span>NEWPOWER</span>
+            {{$t('COL4_tit')}}
+          </div>
         </div>
         <div class="box">
           <a href="javascript:;" class="item">
@@ -417,6 +419,11 @@ export default {
   //   background-color: #1b1b1b;
   //   z-index: 0;
   // }
+  .txt-bg {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+  }
   .box {
     z-index: 1;
     display: flex;
@@ -466,6 +473,8 @@ export default {
         font-size: 18px;
         line-height: 1.8;
         padding-bottom: 50px;
+        text-align: justify;
+        text-justify: newspaper;
       }
     }
   }

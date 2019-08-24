@@ -34,7 +34,7 @@ module.exports = {
     "Platform to register, issue, and trade new energy assets.",
   COL4: [
     {
-      tit: "Comprehensive Coverage of the New Energy Industry",
+      tit: "Comprehensive Coverage",
       con:
         "The new energy industry's network will correspond with NewPower platform's architecture. Links will be forged among central (main) blockchain networks of different countries or regions, local network on the national or regional level, and project networks related to new energy projects."
     },
