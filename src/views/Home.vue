@@ -12,6 +12,26 @@
       </div>
     </div>
     <div class="col-2">
+      <div class="canvas-bg">
+        <vue-particles
+          id="canvabg1"
+          color="#5e6f7e"
+          :particleOpacity="0.7"
+          :particlesNumber="50"
+          shapeType="circle"
+          :particleSize="4"
+          linesColor="#dedede"
+          :linesWidth="1"
+          :lineLinked="true"
+          :lineOpacity="0.4"
+          :linesDistance="150"
+          :moveSpeed="3"
+          :hoverEffect="true"
+          hoverMode="grab"
+          :clickEffect="true"
+          clickMode="push"
+        ></vue-particles>
+      </div>
       <div class="inner-wrap">
         <swiper :options="swiperOption" class="swiper-container">
           <swiper-slide class="box">
@@ -108,6 +128,26 @@
       </div>
     </div>
     <div class="col-5">
+      <div class="canvas-bg">
+        <vue-particles
+          id="canvabg2"
+          color="#5e6f7e"
+          :particleOpacity="0.7"
+          :particlesNumber="50"
+          shapeType="circle"
+          :particleSize="4"
+          linesColor="#dedede"
+          :linesWidth="1"
+          :lineLinked="true"
+          :lineOpacity="0.4"
+          :linesDistance="150"
+          :moveSpeed="3"
+          :hoverEffect="true"
+          hoverMode="grab"
+          :clickEffect="true"
+          clickMode="push"
+        ></vue-particles>
+      </div>
       <div class="inner-wrap">
         <div class="word">
           <div class="tit">
@@ -127,11 +167,15 @@
 </template>
 
 <script>
+import Vue from "vue";
+import VueParticles from "../components/vue-particles";
 import "video.js/dist/video-js.css";
 import "swiper/dist/css/swiper.css";
 import { videoPlayer } from "vue-video-player";
 import { swiper, swiperSlide } from "vue-awesome-swiper";
 import LinkInfo from "../components/LinkInfo";
+
+Vue.use(VueParticles);
 
 export default {
   name: "home",
@@ -257,6 +301,15 @@ export default {
   height: 730px;
   background: #090908 url("../assets/bg_02.jpg") center 0 no-repeat;
   padding-top: 120px;
+  position: relative;
+  .canvas-bg {
+    width: 100%;
+    height: 730px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
   .swiper-container {
     padding-bottom: 100px;
   }
@@ -424,7 +477,16 @@ export default {
 }
 .col-5 {
   height: 600px;
-  background: #090908 url("../assets/bg_04.jpg") 0 0 no-repeat;
+  position: relative;
+  background-color: #000;
+  .canvas-bg {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
   .word {
     width: 600px;
     padding-top: 220px;
