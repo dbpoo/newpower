@@ -304,7 +304,7 @@ export default {
 }
 .col-2 {
   height: 730px;
-  background: #090908 url("../assets/bg_02.jpg") center 0 no-repeat;
+  background-color: #090908;
   position: relative;
   .canvas-bg {
     width: 100%;

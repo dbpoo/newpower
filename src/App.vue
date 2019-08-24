@@ -167,7 +167,6 @@ header {
 footer {
   .inner-wrap {
     height: 200px;
-    background-color: #000000;
     display: flex;
     align-items: center;
     justify-content: space-between;
