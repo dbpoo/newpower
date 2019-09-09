@@ -12,7 +12,7 @@ module.exports = {
     {
       tit: "New Energy Assets Registry",
       con:
-        "A fundamental application of the blockchain platform. A decentralized management platform for new energy projects'development information & contracts is built on the NewPower Chain. It can support functions like development info registry on the blockchain, development workflow management, contracts management, data management, projects operation & maintenance, supply chain management and so on."
+        "A fundamental application of the blockchain platform. A decentralized management platform for new energy projects' development information & contracts is built on the NewPower Chain. It can support functions like development info registry on the blockchain, development workflow management, contracts management, data management, projects operation & maintenance, supply chain management and so on."
     },
     {
       tit: "New Energy Assets Trading",
@@ -41,12 +41,12 @@ module.exports = {
     {
       tit: "Assetization of New Energy Projects",
       con:
-        "New energy projects are embedded with investment value. On NewPower platform, new energy projects can be assetized and traded to maximize the projects'value."
+        "New energy projects are embedded with investment value. On NewPower platform, new energy projects can be assetized and traded to maximize the projects' value."
     },
     {
       tit: "Trusted Data Exchange",
       con:
-        "NewPower platform is based on blockchain technology to ensure data credibility, security, and immutability. NewPower can break down the data silos and realize decentralized & secure data exchange model to ensure the data owners'rights."
+        "NewPower platform is based on blockchain technology to ensure data credibility, security, and immutability. NewPower can break down the data silos and realize decentralized & secure data exchange model to ensure the data owners' rights."
     },
     {
       tit: "Reputation Security System",

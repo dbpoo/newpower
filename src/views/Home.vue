@@ -169,8 +169,11 @@
       </div>
     </div>
     <div class="col-6">
-      <div class="inner-wrap">
-        <link-info v-for="(item,index) in linkArr" :key="index" :item="item"></link-info>
+      <div class="inner-wrap flex-1">
+        <link-info v-for="(item,index) in linkArr1" :key="index" :item="item" class="item"></link-info>
+      </div>
+      <div class="inner-wrap flex-2">
+        <link-info v-for="(item,index) in linkArr2" :key="index" :item="item" class="item"></link-info>
       </div>
     </div>
   </div>
@@ -191,36 +194,33 @@ export default {
   name: "home",
   data() {
     return {
-      linkArr: [
+      linkArr1: [
         {
-          avatarImg: "https://avatars2.githubusercontent.com/u/4?s=158&v=4",
-          name: "Dr.Xxxxxx Xxxx ",
+          avatarImg: "http://newpower.io/img/avatar_1.png",
+          name: "Dr.Dennis",
           position: "CEO"
         },
         {
-          avatarImg: "https://avatars2.githubusercontent.com/u/4?s=158&v=4",
-          name: "Dr.Xxxxxx Xxxx ",
-          position: "CEO"
+          avatarImg: "http://newpower.io/img/avatar_2.png",
+          name: "Dr.Raajessh Kashyap",
+          position: "CTO"
         },
         {
-          avatarImg: "https://avatars2.githubusercontent.com/u/4?s=158&v=4",
-          name: "Dr.Xxxxxx Xxxx ",
-          position: "CEO"
+          avatarImg: "http://newpower.io/img/avatar_3.png",
+          name: "Dr.Ravish Jain",
+          position: "COO"
+        }
+      ],
+      linkArr2: [
+        {
+          avatarImg: "http://newpower.io/img/avatar_4.png",
+          name: "Dr.Mahesh Jakhotia",
+          position: "CFO"
         },
         {
-          avatarImg: "https://avatars2.githubusercontent.com/u/4?s=158&v=4",
-          name: "Dr.Xxxxxx Xxxx ",
-          position: "CEO"
-        },
-        {
-          avatarImg: "https://avatars2.githubusercontent.com/u/4?s=158&v=4",
-          name: "Dr.Xxxxxx Xxxx ",
-          position: "CEO"
-        },
-        {
-          avatarImg: "https://avatars2.githubusercontent.com/u/4?s=158&v=4",
-          name: "Dr.Xxxxxx Xxxx ",
-          position: "CEO"
+          avatarImg: "http://newpower.io/img/avatar_5.png",
+          name: "Dr.Alok",
+          position: "Legal adviser"
         }
       ],
       swiperOption: {
@@ -438,7 +438,7 @@ export default {
       transition: all 0.5s;
       &:hover {
         color: #fff;
-        background-color: rgba(126, 199, 111, 0.7);
+        box-shadow: 0px 0px 40px #7fca70;
       }
       .icon {
         height: 180px;
@@ -514,12 +514,17 @@ export default {
 }
 .col-6 {
   padding: 130px 0 110px 0;
-  .inner-wrap {
+  .flex-1 {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    &:after {
-      width: 30%;
+  }
+  .flex-2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .item {
+      margin: 0 28px;
     }
   }
 }

@@ -6,7 +6,7 @@
         <div class="menu">
           <a href="javascript:;" class="menuHome hvr-underline-from-left">{{$t('NAV.Home')}}</a>
           <a
-            href="javascript:;"
+            href="/pdf/newpower.pdf"
             class="menuWhitePager hvr-underline-from-left"
           >{{$t('NAV.WhitePager')}}</a>
           <a href="javascript:;" class="menuWhitePager hvr-underline-from-left">{{$t('NAV.News')}}</a>
@@ -29,19 +29,21 @@
     <footer>
       <div class="inner-wrap">
         <div class="footer-logo">
-          <a href="#" class="logo"></a>
+          <!-- <a href="#" class="logo"></a> -->
         </div>
         <div class="footer-link">
           <div class="footer-link-icon">
-            <a href="#" target="_blank" class="icon-weixin"></a>
+            <a href="javascript:;" target="_blank" class="icon-weixin">
+              <span></span>
+            </a>
             <a
               href="https://weibo.com/newpowerchain?sudaref=s.weibo.com&display=0&retcode=6102"
               target="_blank"
               class="icon-weibo"
             ></a>
             <a href="https://www.facebook.com/power.new.399" target="_blank" class="icon-facebook"></a>
-            <a href="#" target="_blank" class="icon-twitter"></a>
-            <a href="#" target="_blank" class="icon-ln"></a>
+            <a href="https://twitter.com/NewPower2019" target="_blank" class="icon-twitter"></a>
+            <a href="javascript:;" target="_blank" class="icon-ln"></a>
           </div>
           <div class="footer-link-copyright">Copyright © 2019 the NewPower Team</div>
         </div>
@@ -197,6 +199,22 @@ footer {
       }
       a.icon-weixin {
         background: url("./assets/icon_weixin.png") 0 0 no-repeat;
+        position: relative;
+        span {
+          position: absolute;
+          top: -220px;
+          left: -80px;
+          display: none;
+          width: 200px;
+          height: 200px;
+          background: url("./assets/qr.jpg") 0 0 no-repeat;
+          background-size: contain;
+        }
+        &:hover {
+          span {
+            display: block;
+          }
+        }
       }
       a.icon-weibo {
         background: url("./assets/icon_weibo.png") 0 0 no-repeat;

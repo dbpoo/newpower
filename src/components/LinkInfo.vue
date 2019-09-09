@@ -8,7 +8,6 @@
         <li class="li1">{{item.name}}</li>
         <li class="li2">{{item.position}}</li>
       </ul>
-      <span class="icon-linkin"></span>
     </div>
   </div>
 </template>
@@ -26,7 +25,7 @@ export default {
 
 <style scoped lang="less">
 .linkinfo {
-  width: 30%;
+  width: 365px;
   height: 297px;
   background-color: rgba(8,8,8,.8);
   margin-bottom: 50px;
