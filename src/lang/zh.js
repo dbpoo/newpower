@@ -2,6 +2,7 @@ module.exports = {
   NAV: {
     Home: "首页",
     WhitePager: "白皮书",
+    WhitePagerLink: "/pdf/newpower.pdf",
     News: "动态",
     About: "关于",
     Language: "语言"
@@ -54,5 +55,39 @@ module.exports = {
     }
   ],
   COL5:
-    "NewPowerCoin（NPC）是NewPower主链上发行的代币，作为整个新能源生态系统运转的动力，为了维持新能源主链的运行和整个新能源生态的价值交换。"
+    "NewPowerCoin（NPC）是NewPower主链上发行的代币，作为整个新能源生态系统运转的动力，为了维持新能源主链的运行和整个新能源生态的价值交换。",
+  linkArr1: [
+    {
+      avatarImg: "http://newpower.io/img/avatar_1.png",
+      name: "Dr.Dennis",
+      position: "CEO",
+      info: "Dennis拥有马来西亚理科大学管理学学士学位，曾任BIT医疗设备管理有限公司（印度尼西亚）总经理，现任香港安福集团常务董事、市场总监和董事会成员。"
+    },
+    {
+      avatarImg: "http://newpower.io/img/avatar_2.png",
+      name: "Dr.Raajessh Kashyap",
+      position: "CTO",
+      info: "Raajessh Kashyap拥有Jaypee信息技术学院电子与通信技术学士学位，是Karvan.in联合创始人，帮助Karvan.in等众多公司制定销售策略，在爱立信全球印度服务有限公司担任网络工程师。"
+    },
+    {
+      avatarImg: "http://newpower.io/img/avatar_3.png",
+      name: "Dr.Ravish Jain",
+      position: "COO",
+      info: "Ravish Jain拥有Jaypee信息技术学院学士学位和Jaypee商学院工商管理学硕士学位，曾任Meitu科技区域经理，现任亚洲创新集团（AIG）区域市场总监。"
+    }
+  ],
+  linkArr2: [
+    {
+      avatarImg: "http://newpower.io/img/avatar_4.png",
+      name: "Dr.Mahesh Jakhotia",
+      position: "CFO",
+      info: "Mahesh Jakhotia在Birla理工学院主修经济学，之后在宾夕法尼亚大学学习。曾任亚洲创新集团（AIG）区域经理，现任Bijak联合创始人。在金融领域经验丰富。"
+    },
+    {
+      avatarImg: "http://newpower.io/img/avatar_5.png",
+      name: "Dr.Alok",
+      position: "Legal adviser",
+      info: "Alok毕业于印度大学国立法学院，获法学硕士学位（LLM）。在法律领域经验丰富。曾任Khaitan＆Co律师事务所高级顾问，现为Luthra律师事务所合作伙伴。"
+    }
+  ]
 };

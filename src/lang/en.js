@@ -2,6 +2,7 @@ module.exports = {
   NAV: {
     Home: "Home",
     WhitePager: "White Pager",
+    WhitePagerLink: "/pdf/newpower_en.pdf",
     News: "News",
     About: "About",
     Language: "Language"
@@ -10,7 +11,7 @@ module.exports = {
   COL4_tit: "PLATFORM ADVANTAGES",
   SWIPER: [
     {
-      tit: "New Energy Assets Registry",
+      tit: "New Energy Assets Intergration",
       con:
         "A fundamental application of the blockchain platform. A decentralized management platform for new energy projects' development information & contracts is built on the NewPower Chain. It can support functions like development info registry on the blockchain, development workflow management, contracts management, data management, projects operation & maintenance, supply chain management and so on."
     },
@@ -30,8 +31,7 @@ module.exports = {
         "With the help of blockchain technology, a carbon emissions trading platform can be constructed on the basis of the clearing & settlement of electricity. The platform includes carbon emissions rights (permits or quotas) registry system, data reporting system, and trading & settlement system."
     }
   ],
-  COL1:
-    "Platform to register, issue, and trade new energy assets.",
+  COL1: "Platform to Intergrade, Issue, and Trade New Energy Assets.",
   COL4: [
     {
       tit: "Comprehensive Coverage",
@@ -55,5 +55,39 @@ module.exports = {
     }
   ],
   COL5:
-    "NewPowerCoin (NPC) is the token issued by NewPower. It will function as the fuel for the entire new energy ecosystem to maintain the healthy operation of the central NewPower blockchain network and value exchanges conducted in the ecosystem."
+    "NewPowerCoin (NPC) is the token issued by NewPower. It will function as the fuel for the entire new energy ecosystem to maintain the healthy operation of the central NewPower blockchain network and value exchanges conducted in the ecosystem.",
+  linkArr1: [
+    {
+      avatarImg: "http://newpower.io/img/avatar_1.png",
+      name: "Dr.Dennis",
+      position: "CEO",
+      info: "With a bachelor’s degree in Management Science from University of Science Malaysia, Dennis worked as General Manager of BIT Medical Device Management (Indonesia) Co., Ltd. and now he is the Executive Director,Chief Marketing Officer and Board of Directors in Hong Kong Anfu Group."
+    },
+    {
+      avatarImg: "http://newpower.io/img/avatar_2.png",
+      name: "Dr.Raajessh Kashyap",
+      position: "CTO",
+      info: "With a bachelor’s degree in Electronics and Communications Technology from Jaypee Institute of Information Technology, Raajessh Kashyap was the co-founder of Karvan.in and he developed the sales strategy of Karvan.in and several other corporates. He is also a network engineer at Ericsson Global India Services Pte Ltd."
+    },
+    {
+      avatarImg: "http://newpower.io/img/avatar_3.png",
+      name: "Dr.Ravish Jain",
+      position: "COO",
+      info: "With a bachelor’s degree from Jaypee University of Information Technology and a MBA from Jaypee Business School, Ravish Jain worked as the country manager in Meitu Technology. Now, he works as the country marketing director in Asia Innovations Group (AIG)."
+    }
+  ],
+  linkArr2: [
+    {
+      avatarImg: "http://newpower.io/img/avatar_4.png",
+      name: "Dr.Mahesh Jakhotia",
+      position: "CFO",
+      info: "Majoring in economics in Birla Institute of Technology and Science, and then studying in the University of Pennsylvania. He worked as the country director in Asia Innovations Group (AIG), and now he is the co-founder of Bijak. He is well-experienced in the financial industry."
+    },
+    {
+      avatarImg: "http://newpower.io/img/avatar_5.png",
+      name: "Dr.Alok",
+      position: "Legal adviser",
+      info: "Graduated from the National Law School of India University, and has a Master degree of Laws(LLM).He is very experienced in the legal industry.He once worked as a senior associate in Khaitan &Co, now is the partner designate of Luthra Law Offices."
+    }
+  ]
 };

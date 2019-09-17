@@ -7,7 +7,7 @@
             <span class="sp1">NEW</span>
             <span class="sp2">POWER&nbsp;&nbsp;&nbsp;</span>
           </div>
-          <div class="con">{{$t('COL1')}}</div>
+          <div :class="'con con-' + lang">{{$t('COL1')}}</div>
         </div>
       </div>
     </div>
@@ -170,10 +170,10 @@
     </div>
     <div class="col-6">
       <div class="inner-wrap flex-1">
-        <link-info v-for="(item,index) in linkArr1" :key="index" :item="item" class="item"></link-info>
+        <link-info v-for="(item,index) in $t('linkArr1')" :key="index" :item="item" :class="`item item-`+index"></link-info>
       </div>
       <div class="inner-wrap flex-2">
-        <link-info v-for="(item,index) in linkArr2" :key="index" :item="item" class="item"></link-info>
+        <link-info v-for="(item,index) in $t('linkArr2')" :key="index" :item="item" :class="`item item-`+index"></link-info>
       </div>
     </div>
   </div>
@@ -194,35 +194,7 @@ export default {
   name: "home",
   data() {
     return {
-      linkArr1: [
-        {
-          avatarImg: "http://newpower.io/img/avatar_1.png",
-          name: "Dr.Dennis",
-          position: "CEO"
-        },
-        {
-          avatarImg: "http://newpower.io/img/avatar_2.png",
-          name: "Dr.Raajessh Kashyap",
-          position: "CTO"
-        },
-        {
-          avatarImg: "http://newpower.io/img/avatar_3.png",
-          name: "Dr.Ravish Jain",
-          position: "COO"
-        }
-      ],
-      linkArr2: [
-        {
-          avatarImg: "http://newpower.io/img/avatar_4.png",
-          name: "Dr.Mahesh Jakhotia",
-          position: "CFO"
-        },
-        {
-          avatarImg: "http://newpower.io/img/avatar_5.png",
-          name: "Dr.Alok",
-          position: "Legal adviser"
-        }
-      ],
+      lang: window.LANG,
       swiperOption: {
         slidesPerView: 1,
         spaceBetween: 30,
@@ -283,7 +255,6 @@ export default {
   height: 840px;
   background: #090908 url("../assets/bg_01.jpg") center 0 no-repeat;
   .word {
-    width: 918px;
     height: 172px;
     margin-top: 360px;
     background: url("../assets/txtbg.png") 0 0 no-repeat;
@@ -301,6 +272,9 @@ export default {
     .con {
       color: #ececec;
       font-size: 32px;
+    }
+    .con-zh {
+      font-size: 36px;
     }
   }
 }
@@ -518,12 +492,16 @@ export default {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    .item {
+      z-index: 9;
+    }
   }
   .flex-2 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     .item {
+      z-index: 8;
       margin: 0 28px;
     }
   }

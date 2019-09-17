@@ -6,8 +6,9 @@
         <div class="menu">
           <a href="javascript:;" class="menuHome hvr-underline-from-left">{{$t('NAV.Home')}}</a>
           <a
-            href="/pdf/newpower.pdf"
+            :href="$t('NAV.WhitePagerLink')"
             class="menuWhitePager hvr-underline-from-left"
+            target="_blank"
           >{{$t('NAV.WhitePager')}}</a>
           <a href="javascript:;" class="menuWhitePager hvr-underline-from-left">{{$t('NAV.News')}}</a>
           <a href="javascript:;" class="menuWhitePager hvr-underline-from-left">{{$t('NAV.About')}}</a>

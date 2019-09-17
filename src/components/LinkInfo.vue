@@ -9,6 +9,10 @@
         <li class="li2">{{item.position}}</li>
       </ul>
     </div>
+    <div class="infohover">
+      <div class="infohover-t"></div>
+      <div class="infohover-c">{{item.info}}</div>
+    </div>
   </div>
 </template>
 
@@ -27,8 +31,17 @@ export default {
 .linkinfo {
   width: 365px;
   height: 297px;
-  background-color: rgba(8,8,8,.8);
+  background-color: rgba(8, 8, 8, 0.8);
   margin-bottom: 50px;
+  position: relative;
+  .infohover {
+    display: none;
+  }
+  &:hover {
+    .infohover {
+      display: block;
+    }
+  }
 }
 
 .linkinfo-avatar {
@@ -36,7 +49,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(37,37,37,.8);
+  background-color: rgba(37, 37, 37, 0.8);
   img {
     border-radius: 50%;
   }
@@ -61,6 +74,22 @@ export default {
     width: 56px;
     height: 56px;
     background: url("../assets/icon_linkin.png");
+  }
+}
+
+.infohover {
+  width: 363px;
+  position: absolute;
+  top: 270px;
+  left: 0;
+  .infohover-t {
+    width: 363px;
+    height: 23px;
+    background: url("../assets/hoverinfo.png") 0 0 no-repeat;
+  }
+  .infohover-c {
+    background-color: rgba(73, 113, 65, 0.8);
+    padding: 20px;
   }
 }
 </style>
