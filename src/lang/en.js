@@ -9,6 +9,7 @@ module.exports = {
   },
   COL2_tit: "ECOLOGICAL CONSTRUCTION",
   COL4_tit: "PLATFORM ADVANTAGES",
+  COL6_tit: "TEAM MEMBERS",
   SWIPER: [
     {
       tit: "New Energy Assets Intergration",

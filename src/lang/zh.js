@@ -9,6 +9,7 @@ module.exports = {
   },
   COL2_tit: "生态建设",
   COL4_tit: "平台优势",
+  COL6_tit: "团队介绍",
   SWIPER: [
     {
       tit: "新能源资产上链",

@@ -169,11 +169,29 @@
       </div>
     </div>
     <div class="col-6">
+      <div class="inner-warp">
+        <div class="col-tit">
+          <div class="txt-bg">
+            <span>NEWPOWER</span>
+            {{$t('COL6_tit')}}
+          </div>
+        </div>
+      </div>
       <div class="inner-wrap flex-1">
-        <link-info v-for="(item,index) in $t('linkArr1')" :key="index" :item="item" :class="`item item-`+index"></link-info>
+        <link-info
+          v-for="(item,index) in $t('linkArr1')"
+          :key="index"
+          :item="item"
+          :class="`item item-`+index"
+        ></link-info>
       </div>
       <div class="inner-wrap flex-2">
-        <link-info v-for="(item,index) in $t('linkArr2')" :key="index" :item="item" :class="`item item-`+index"></link-info>
+        <link-info
+          v-for="(item,index) in $t('linkArr2')"
+          :key="index"
+          :item="item"
+          :class="`item item-`+index"
+        ></link-info>
       </div>
     </div>
   </div>
@@ -487,7 +505,7 @@ export default {
   }
 }
 .col-6 {
-  padding: 130px 0 110px 0;
+  padding: 100px 0 110px 0;
   .flex-1 {
     display: flex;
     justify-content: space-between;
