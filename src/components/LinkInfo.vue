@@ -11,19 +11,14 @@
     </div>
     <div class="infohover">
       <div class="infohover-t"></div>
-      <div class="infohover-c">{{item.info}}</div>
+      <div class="infohover-c" v-html="item.info"></div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: {
-    item: {
-      type: Object,
-      default: {}
-    }
-  }
+  props: ['item']
 };
 </script>
 
@@ -34,6 +29,7 @@ export default {
   background-color: rgba(8, 8, 8, 0.8);
   margin-bottom: 50px;
   position: relative;
+  cursor: pointer;
   .infohover {
     display: none;
   }
@@ -81,6 +77,7 @@ export default {
   width: 363px;
   position: absolute;
   top: 270px;
+  z-index: 10;
   left: 0;
   .infohover-t {
     width: 363px;

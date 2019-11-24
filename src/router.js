@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
 
 Vue.use(Router)
 
@@ -9,7 +8,19 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: resolve => require(['./views/Home'], resolve)
+    }, {
+      path: '/about',
+      name: 'about',
+      component: resolve => require(['./views/About'], resolve)
+    }, {
+      path: '/news',
+      name: 'news',
+      component: resolve => require(['./views/News'], resolve)
+    }, {
+      path: '/detail/:id',
+      name: 'detail',
+      component: resolve => require(['./views/Detail'], resolve)
     }
   ]
 })

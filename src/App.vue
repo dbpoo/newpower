@@ -4,14 +4,14 @@
       <div class="inner-wrap">
         <a href="javascript:;" class="logo"></a>
         <div class="menu">
-          <a href="javascript:;" class="menuHome hvr-underline-from-left">{{$t('NAV.Home')}}</a>
+          <router-link to="/" tag="a" class="menuHome hvr-underline-from-left">{{$t('NAV.Home')}}</router-link>
           <a
             :href="$t('NAV.WhitePagerLink')"
             class="menuWhitePager hvr-underline-from-left"
             target="_blank"
           >{{$t('NAV.WhitePager')}}</a>
-          <a href="javascript:;" class="menuWhitePager hvr-underline-from-left">{{$t('NAV.News')}}</a>
-          <a href="javascript:;" class="menuWhitePager hvr-underline-from-left">{{$t('NAV.About')}}</a>
+          <router-link to="/news" tag="a" class="menuWhitePager hvr-underline-from-left">{{$t('NAV.News')}}</router-link>
+          <router-link to="/about" tag="a" class="menuWhitePager hvr-underline-from-left">{{$t('NAV.About')}}</router-link>
           <div class="menuLanguage">
             {{$t('NAV.Language')}}
             <ul>

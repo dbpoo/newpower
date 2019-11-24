@@ -37,38 +37,41 @@
           <span>NEWPOWER</span>
           {{$t('COL2_tit')}}
         </div>
+        <div class="col-desc">
+          {{$t('COL2_desc')}}
+        </div>
         <swiper :options="swiperOption" class="swiper-container">
           <swiper-slide class="box">
             <div class="img-0">
               <i></i>
             </div>
-            <div class="line"></div>
+            <!-- <div class="line"></div> -->
             <div class="word">
-              <div class="tit">{{$t('SWIPER[0].tit')}}</div>
-              <div class="con">{{$t('SWIPER[0].con')}}</div>
+              <div class="tit" :class="lang" v-html="$t('SWIPER[0].tit')"></div>
+              <div class="con" :class="lang">{{$t('SWIPER[0].con')}}</div>
             </div>
           </swiper-slide>
           <swiper-slide class="box">
             <div class="img-1">
               <i></i>
             </div>
-            <div class="line"></div>
+            <!-- <div class="line"></div> -->
             <div class="word">
-              <div class="tit">{{$t('SWIPER[1].tit')}}</div>
-              <div class="con">{{$t('SWIPER[1].con')}}</div>
+              <div class="tit" :class="lang" v-html="$t('SWIPER[1].tit')"></div>
+              <div class="con" :class="lang">{{$t('SWIPER[1].con')}}</div>
             </div>
           </swiper-slide>
           <swiper-slide class="box">
             <div class="img-2">
               <i></i>
             </div>
-            <div class="line"></div>
+            <!-- <div class="line"></div> -->
             <div class="word">
-              <div class="tit">{{$t('SWIPER[2].tit')}}</div>
-              <div class="con">{{$t('SWIPER[2].con')}}</div>
+              <div class="tit" :class="lang" v-html="$t('SWIPER[2].tit')"></div>
+              <div class="con" :class="lang">{{$t('SWIPER[2].con')}}</div>
             </div>
           </swiper-slide>
-          <swiper-slide class="box">
+          <!-- <swiper-slide class="box">
             <div class="img-3">
               <i></i>
             </div>
@@ -77,11 +80,29 @@
               <div class="tit">{{$t('SWIPER[3].tit')}}</div>
               <div class="con">{{$t('SWIPER[3].con')}}</div>
             </div>
-          </swiper-slide>
+          </swiper-slide> -->
           <div class="swiper-pagination" slot="pagination"></div>
           <div class="swiper-button-prev" slot="button-prev"></div>
           <div class="swiper-button-next" slot="button-next"></div>
         </swiper>
+      </div>
+    </div>
+    <div class="col-2-1">
+      <div class="col-tit">
+        <div class="txt-bg">
+          <span>NEWPOWER</span>
+          {{$t('COL2_1_tit')}}
+        </div>
+      </div>
+      <div class="box">
+        <div class="cj-list" v-for="(item, index) in $t('COL2_List')" :key="index">
+          <img v-if="index===0" src="../assets/cj_icon1.png" alt="">
+          <img v-if="index===1" src="../assets/cj_icon2.png" alt="">
+          <img v-if="index===2" src="../assets/cj_icon3.png" alt="">
+          <img v-if="index===3" src="../assets/cj_icon4.png" alt="">
+          <h3 v-html="item.title"></h3>
+          <p v-html="item.con"></p>
+        </div>
       </div>
     </div>
     <div class="col-3">
@@ -106,7 +127,32 @@
           </div>
         </div>
         <div class="box">
-          <a href="javascript:;" class="item">
+          <div class="desc">{{$t('COL4_DESC')}}</div>
+          <div class="tech-box" :class="{'show': this.scrollTop > 2400}" ref="techBox1">
+            <img src="../assets/tech_icon1.png" alt="">
+            <div class="text">
+              <h3>{{$t('COL4[0].tit')}}</h3>
+              <div class="desc">{{$t('COL4[0].desc')}}</div>
+              <p>{{$t('COL4[0].con')}}</p>
+            </div>
+          </div>
+          <div class="tech-box" :class="{'show': this.scrollTop > 2700}" ref="techBox2">
+            <div class="text">
+              <h3>{{$t('COL4[1].tit')}}</h3>
+              <div class="desc">{{$t('COL4[1].desc')}}</div>
+              <p>{{$t('COL4[1].con')}}</p>
+            </div>
+            <img src="../assets/tech_icon2.png" alt="">
+          </div>
+          <div class="tech-box" :class="{'show': this.scrollTop > 3000}" ref="techBox3">
+            <img src="../assets/tech_icon3.png" alt="">
+            <div class="text">
+              <h3>{{$t('COL4[2].tit')}}</h3>
+              <div class="desc">{{$t('COL4[2].desc')}}</div>
+              <p>{{$t('COL4[2].con')}}</p>
+            </div>
+          </div>
+          <!-- <a href="javascript:;" class="item">
             <div class="icon">
               <i class="i1"></i>
             </div>
@@ -133,11 +179,11 @@
             </div>
             <div class="tit">{{$t('COL4[3].tit')}}</div>
             <div class="con">{{$t('COL4[3].con')}}</div>
-          </a>
+          </a> -->
         </div>
       </div>
     </div>
-    <div class="col-5">
+    <!-- <div class="col-5">
       <div class="canvas-bg">
         <vue-particles
           id="canvabg2"
@@ -167,13 +213,12 @@
           <div class="con">{{$t('COL5')}}</div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="col-6">
       <div class="inner-warp">
         <div class="col-tit">
           <div class="txt-bg">
-            <span>NEWPOWER</span>
-            {{$t('COL6_tit')}}
+            <span>{{$t('COL6_tit')}}</span>
           </div>
         </div>
       </div>
@@ -185,9 +230,32 @@
           :class="`item item-`+index"
         ></link-info>
       </div>
-      <div class="inner-wrap flex-2">
+      <div class="inner-wrap flex-1">
         <link-info
           v-for="(item,index) in $t('linkArr2')"
+          :key="index"
+          :item="item"
+          :class="`item item-`+index"
+        ></link-info>
+      </div>
+      <div class="inner-warp">
+        <div class="col-tit">
+          <div class="txt-bg">
+            <span>{{$t('COL6_tit_1')}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="inner-wrap flex-1">
+        <link-info
+          v-for="(item,index) in $t('linkArr3')"
+          :key="index"
+          :item="item"
+          :class="`item item-`+index"
+        ></link-info>
+      </div>
+      <div class="inner-wrap flex-1">
+        <link-info
+          v-for="(item,index) in $t('linkArr4')"
           :key="index"
           :item="item"
           :class="`item item-`+index"
@@ -212,6 +280,7 @@ export default {
   name: "home",
   data() {
     return {
+      scrollTop: 0,
       lang: window.LANG,
       swiperOption: {
         slidesPerView: 1,
@@ -227,7 +296,7 @@ export default {
         }
       },
       playerOptions: {
-        autoplay: false, //如果true,浏览器准备好时开始回放。
+        autoplay: false, // 如果true,浏览器准备好时开始回放。
         muted: false, // 默认情况下将会消除任何音频。
         loop: false, // 导致视频一结束就重新开始。
         preload: "auto", // 建议浏览器在<video>加载元素后是否应该开始下载视频数据。auto浏览器选择最佳行为,立即开始加载视频（如果浏览器支持）
@@ -236,17 +305,17 @@ export default {
         fluid: true, // 当true时，Video.js player将拥有流体大小。换句话说，它将按比例缩放以适应其容器。
         sources: [
           {
-            type: "video/mp4", //这里的种类支持很多种：基本视频格式、直播、流媒体等，具体可以参看git网址项目
-            src: "http://www.xinnengboan.com/wp-content/mp4/xinneng.mp4" //url地址
+            type: "video/mp4", // 这里的种类支持很多种：基本视频格式、直播、流媒体等，具体可以参看git网址项目
+            src: "http://www.xinnengboan.com/wp-content/mp4/xinneng.mp4" // url地址
           }
         ],
-        poster: require("../assets/test.jpg"), //你的封面地址
-        notSupportedMessage: "此视频暂无法播放，请稍后再试", //允许覆盖Video.js无法播放媒体源时显示的默认信息。
+        poster: require("../assets/test.jpg"), // 你的封面地址
+        notSupportedMessage: "此视频暂无法播放，请稍后再试", // 允许覆盖Video.js无法播放媒体源时显示的默认信息。
         controlBar: {
           timeDivider: true,
           durationDisplay: true,
           remainingTimeDisplay: false,
-          fullscreenToggle: true //全屏按钮
+          fullscreenToggle: true // 全屏按钮
         }
       }
     };
@@ -256,6 +325,11 @@ export default {
     swiperSlide,
     LinkInfo,
     videoPlayer
+  },
+  mounted () {
+    window.onscroll = () => {
+      this.scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    }
   }
 };
 </script>
@@ -273,31 +347,33 @@ export default {
   height: 840px;
   background: #090908 url("../assets/bg_01.jpg") center 0 no-repeat;
   .word {
-    height: 172px;
-    margin-top: 360px;
-    background: url("../assets/txtbg.png") 0 0 no-repeat;
+    height: 244px;
+    width: 1100px;
+    margin-top: 324px;
+    background: url("../assets/txtbg.png") 0 0 repeat-y;
+    background-size: 100%;
     padding-left: 10px;
     .tit {
-      font-size: 70px;
+      font-size: 110px;
       .sp1 {
         color: #7fca70;
       }
       .sp2 {
         color: #ececec;
-        border-bottom: 1px solid #7fca70;
+        border-bottom: 3px solid #7fca70;
       }
     }
     .con {
       color: #ececec;
-      font-size: 32px;
+      font-size: 40px;
     }
     .con-zh {
-      font-size: 36px;
+      font-size: 50px;
     }
   }
 }
 .col-2 {
-  height: 730px;
+  height: 915px;
   background-color: #090908;
   position: relative;
   .canvas-bg {
@@ -307,6 +383,14 @@ export default {
     top: 0;
     left: 0;
     overflow: hidden;
+  }
+  .col-desc{
+    margin: 30px 0  50px 0;
+    padding: 0 20px;
+    line-height: 30px;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 1px;
   }
   .swiper-container {
     padding-bottom: 100px;
@@ -354,10 +438,18 @@ export default {
         text-align: center;
         color: #7ec76f;
         margin-bottom: 40px;
+        white-space: nowrap;
+        &.en{
+          text-align: left;
+          font-size: 26px;
+        }
       }
       .con {
         font-size: 18px;
         line-height: 1.8;
+        &.en{
+          width: 80%
+        }
       }
     }
     .img-0 {
@@ -378,6 +470,42 @@ export default {
     .img-3 {
       &:hover {
         background: url("../assets/swiper_3_hover.png") 0 0 no-repeat;
+      }
+    }
+  }
+}
+.col-2-1 {
+  height: 550px;
+  padding-top: 90px;
+  .box{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    .cj-list{
+      padding-top: 20px;
+      width: 286px;
+      min-height: 318px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+      cursor: pointer;
+      &:hover{
+        background-color: rgba(72,115,64,.8);
+      }
+      img{
+        margin: 0 auto;
+      }
+      h3{
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      p{
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
       }
     }
   }
@@ -422,53 +550,117 @@ export default {
     justify-content: space-between;
     flex-wrap: wrap;
     padding-bottom: 100px;
-    a.item {
-      width: 590px;
-      background-color: rgba(0, 0, 0, 0.7);
-      margin-bottom: 20px;
-      padding: 0 35px;
-      transition: all 0.5s;
-      &:hover {
-        color: #fff;
-        box-shadow: 0px 0px 40px #7fca70;
+    > .desc{
+      margin-bottom: 110px;
+      padding: 0 20px;
+      font-size: 18px;
+      line-height: 40px;
+      text-align: center;
+    }
+    .tech-box{
+      margin-bottom: 110px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &.show{
+        opacity: 0;
+        animation: changePos .5s 0s ease-in forwards;
       }
-      .icon {
-        height: 180px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        i {
-          width: 330px;
-          height: 180px;
-          display: block;
-          border-radius: 50%;
-        }
-        i.i1 {
-          background: url("../assets/icon1.png") 0 0 no-repeat;
-        }
-        i.i2 {
-          background: url("../assets/icon2.png") 0 0 no-repeat;
-        }
-        i.i3 {
-          background: url("../assets/icon3.png") 0 0 no-repeat;
-        }
-        i.i4 {
-          background: url("../assets/icon4.png") 0 0 no-repeat;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      img{
+        width: 454px;
+        height: 223px;
+      }
+      &:nth-child(3){
+        .text .desc::after{
+          left: 130px;
+          width: 480px;
         }
       }
-      .tit {
-        font-size: 30px;
-        text-align: center;
-        margin-bottom: 25px;
+      &:nth-child(4){
+        .text .desc::after{
+          left: 130px;
+          width: 480px;
+        }
       }
-      .con {
-        font-size: 18px;
-        line-height: 1.8;
-        padding-bottom: 50px;
-        text-align: justify;
-        text-justify: newspaper;
+      .text {
+        width: 643px;
+        h3{
+          font-size: 30px;
+          color: #7fca70;
+          line-height: 34px;
+        }
+        .desc{
+          position: relative;
+          font-size: 24px;
+          margin-top: 10px;
+          margin-bottom: 30px;
+          &::after{
+            position: absolute;
+            content: "";
+            left: 190px;
+            top: -20px;
+            width: 290px;
+            height: 4px;
+            background-color: #7fca70;
+          }
+        }
+        p{
+          text-align: justify;
+          font-size: 18px;
+        }
       }
     }
+    // a.item {
+    //   width: 590px;
+    //   background-color: rgba(0, 0, 0, 0.7);
+    //   margin-bottom: 20px;
+    //   padding: 0 35px;
+    //   transition: all 0.5s;
+    //   &:hover {
+    //     color: #fff;
+    //     box-shadow: 0px 0px 40px #7fca70;
+    //   }
+    //   .icon {
+    //     height: 180px;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     i {
+    //       width: 330px;
+    //       height: 180px;
+    //       display: block;
+    //       border-radius: 50%;
+    //     }
+    //     i.i1 {
+    //       background: url("../assets/icon1.png") 0 0 no-repeat;
+    //     }
+    //     i.i2 {
+    //       background: url("../assets/icon2.png") 0 0 no-repeat;
+    //     }
+    //     i.i3 {
+    //       background: url("../assets/icon3.png") 0 0 no-repeat;
+    //     }
+    //     i.i4 {
+    //       background: url("../assets/icon4.png") 0 0 no-repeat;
+    //     }
+    //   }
+    //   .tit {
+    //     font-size: 30px;
+    //     text-align: center;
+    //     margin-bottom: 25px;
+    //   }
+    //   .con {
+    //     font-size: 18px;
+    //     line-height: 1.8;
+    //     padding-bottom: 50px;
+    //     text-align: justify;
+    //     text-justify: newspaper;
+    //   }
+    // }
   }
 }
 .col-5 {
@@ -510,9 +702,9 @@ export default {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    .item {
-      z-index: 9;
-    }
+    // .item {
+      // z-index: 9;
+    // }
   }
   .flex-2 {
     display: flex;
@@ -603,5 +795,14 @@ export default {
 
 /deep/.vjs-button > .vjs-icon-placeholder:before {
   font-size: 22px;
+}
+@keyframes changePos {
+  from{
+    opacity: 0;
+    transform:  translateY(100px)
+  }
+  to{
+    opacity: 1;
+  }
 }
 </style>
