@@ -4,22 +4,44 @@
       <div class="inner-wrap">
         <a href="javascript:;" class="logo"></a>
         <div class="menu">
-          <router-link to="/" tag="a" class="menuHome hvr-underline-from-left">{{$t('NAV.Home')}}</router-link>
+          <router-link
+            to="/"
+            tag="a"
+            class="menuHome hvr-underline-from-left"
+            >{{ $t("NAV.Home") }}</router-link
+          >
           <a
             :href="$t('NAV.WhitePagerLink')"
             class="menuWhitePager hvr-underline-from-left"
             target="_blank"
-          >{{$t('NAV.WhitePager')}}</a>
-          <router-link to="/news" tag="a" class="menuWhitePager hvr-underline-from-left">{{$t('NAV.News')}}</router-link>
-          <router-link to="/about" tag="a" class="menuWhitePager hvr-underline-from-left">{{$t('NAV.About')}}</router-link>
+            >{{ $t("NAV.WhitePager") }}</a
+          >
+          <router-link
+            to="/news"
+            tag="a"
+            class="menuWhitePager hvr-underline-from-left"
+            >{{ $t("NAV.News") }}</router-link
+          >
+          <router-link
+            to="/about"
+            tag="a"
+            class="menuWhitePager hvr-underline-from-left"
+            >{{ $t("NAV.About") }}</router-link
+          >
           <div class="menuLanguage">
-            {{$t('NAV.Language')}}
+            {{ $t("NAV.Language") }}
             <ul>
-              <li :class="lang == 'zh'?'active' :''">
-                <a href="./index.html">中文</a>
+              <li
+                :class="lang == 'zh' ? 'active' : ''"
+                @click="changeLanguageVal"
+              >
+                中文
               </li>
-              <li :class="lang == 'en'?'active' :''">
-                <a href="./index_en.html">English</a>
+              <li
+                :class="lang == 'en' ? 'active' : ''"
+                @click="changeLanguageVal"
+              >
+                English
               </li>
             </ul>
           </div>
@@ -42,11 +64,21 @@
               target="_blank"
               class="icon-weibo"
             ></a>
-            <a href="https://www.facebook.com/power.new.399" target="_blank" class="icon-facebook"></a>
-            <a href="https://twitter.com/NewPower2019" target="_blank" class="icon-twitter"></a>
+            <a
+              href="https://www.facebook.com/power.new.399"
+              target="_blank"
+              class="icon-facebook"
+            ></a>
+            <a
+              href="https://twitter.com/NewPower2019"
+              target="_blank"
+              class="icon-twitter"
+            ></a>
             <a href="javascript:;" target="_blank" class="icon-ln"></a>
           </div>
-          <div class="footer-link-copyright">Copyright © 2019 the NewPower Team</div>
+          <div class="footer-link-copyright">
+            Copyright © 2019 the NewPower Team
+          </div>
         </div>
       </div>
     </footer>
@@ -59,12 +91,27 @@ export default {
   data() {
     return {
       menuShow: false,
-      lang: window.LANG
+      lang: sessionStorage.getItem("LANG")
     };
   },
   methods: {
     changeLanguage(key, index) {
       this.menuShow = false;
+    },
+    changeLanguageVal() {
+      if (this.lang == "zh") {
+        this.lang = "en";
+        this.$i18n.locale = this.lang; //关键语句
+        sessionStorage.setItem("LANG", this.lang);
+      } else {
+        this.lang = "zh";
+        this.$i18n.locale = this.lang; //关键语句
+        sessionStorage.setItem("LANG", this.lang);
+      }
+      location.reload();
+    },
+    addCookie(val) {
+      sessionStorage.setItem("LANG", val);
     }
   }
 };

@@ -7,7 +7,7 @@
             <span class="sp1">NEW</span>
             <span class="sp2">POWER&nbsp;&nbsp;&nbsp;</span>
           </div>
-          <div :class="'con con-' + lang">{{$t('COL1')}}</div>
+          <div :class="'con con-' + lang">{{ $t("COL1") }}</div>
         </div>
       </div>
     </div>
@@ -35,10 +35,10 @@
       <div class="inner-wrap">
         <div class="col-tit">
           <span>NEWPOWER</span>
-          {{$t('COL2_tit')}}
+          {{ $t("COL2_tit") }}
         </div>
         <div class="col-desc">
-          {{$t('COL2_desc')}}
+          {{ $t("COL2_desc") }}
         </div>
         <swiper :options="swiperOption" class="swiper-container">
           <swiper-slide class="box">
@@ -48,7 +48,7 @@
             <!-- <div class="line"></div> -->
             <div class="word">
               <div class="tit" :class="lang" v-html="$t('SWIPER[0].tit')"></div>
-              <div class="con" :class="lang">{{$t('SWIPER[0].con')}}</div>
+              <div class="con" :class="lang">{{ $t("SWIPER[0].con") }}</div>
             </div>
           </swiper-slide>
           <swiper-slide class="box">
@@ -58,7 +58,7 @@
             <!-- <div class="line"></div> -->
             <div class="word">
               <div class="tit" :class="lang" v-html="$t('SWIPER[1].tit')"></div>
-              <div class="con" :class="lang">{{$t('SWIPER[1].con')}}</div>
+              <div class="con" :class="lang">{{ $t("SWIPER[1].con") }}</div>
             </div>
           </swiper-slide>
           <swiper-slide class="box">
@@ -68,7 +68,7 @@
             <!-- <div class="line"></div> -->
             <div class="word">
               <div class="tit" :class="lang" v-html="$t('SWIPER[2].tit')"></div>
-              <div class="con" :class="lang">{{$t('SWIPER[2].con')}}</div>
+              <div class="con" :class="lang">{{ $t("SWIPER[2].con") }}</div>
             </div>
           </swiper-slide>
           <!-- <swiper-slide class="box">
@@ -91,15 +91,19 @@
       <div class="col-tit">
         <div class="txt-bg">
           <span>NEWPOWER</span>
-          {{$t('COL2_1_tit')}}
+          {{ $t("COL2_1_tit") }}
         </div>
       </div>
       <div class="box">
-        <div class="cj-list" v-for="(item, index) in $t('COL2_List')" :key="index">
-          <img v-if="index===0" src="../assets/cj_icon1.png" alt="">
-          <img v-if="index===1" src="../assets/cj_icon2.png" alt="">
-          <img v-if="index===2" src="../assets/cj_icon3.png" alt="">
-          <img v-if="index===3" src="../assets/cj_icon4.png" alt="">
+        <div
+          class="cj-list"
+          v-for="(item, index) in $t('COL2_List')"
+          :key="index"
+        >
+          <img v-if="index === 0" src="../assets/cj_icon1.png" alt="" />
+          <img v-if="index === 1" src="../assets/cj_icon2.png" alt="" />
+          <img v-if="index === 2" src="../assets/cj_icon3.png" alt="" />
+          <img v-if="index === 3" src="../assets/cj_icon4.png" alt="" />
           <h3 v-html="item.title"></h3>
           <p v-html="item.con"></p>
         </div>
@@ -123,33 +127,45 @@
         <div class="col-tit">
           <div class="txt-bg">
             <span>NEWPOWER</span>
-            {{$t('COL4_tit')}}
+            {{ $t("COL4_tit") }}
           </div>
         </div>
         <div class="box">
-          <div class="desc">{{$t('COL4_DESC')}}</div>
-          <div class="tech-box" :class="{'show': this.scrollTop > 2400}" ref="techBox1">
-            <img src="../assets/tech_icon1.png" alt="">
+          <div class="desc">{{ $t("COL4_DESC") }}</div>
+          <div
+            class="tech-box"
+            :class="{ show: this.scrollTop > 2400 }"
+            ref="techBox1"
+          >
+            <img src="../assets/tech_icon1.png" alt="" />
             <div class="text">
-              <h3>{{$t('COL4[0].tit')}}</h3>
-              <div class="desc">{{$t('COL4[0].desc')}}</div>
-              <p>{{$t('COL4[0].con')}}</p>
+              <h3>{{ $t("COL4[0].tit") }}</h3>
+              <div class="desc">{{ $t("COL4[0].desc") }}</div>
+              <p>{{ $t("COL4[0].con") }}</p>
             </div>
           </div>
-          <div class="tech-box" :class="{'show': this.scrollTop > 2700}" ref="techBox2">
+          <div
+            class="tech-box"
+            :class="{ show: this.scrollTop > 2700 }"
+            ref="techBox2"
+          >
             <div class="text">
-              <h3>{{$t('COL4[1].tit')}}</h3>
-              <div class="desc">{{$t('COL4[1].desc')}}</div>
-              <p>{{$t('COL4[1].con')}}</p>
+              <h3>{{ $t("COL4[1].tit") }}</h3>
+              <div class="desc">{{ $t("COL4[1].desc") }}</div>
+              <p>{{ $t("COL4[1].con") }}</p>
             </div>
-            <img src="../assets/tech_icon2.png" alt="">
+            <img src="../assets/tech_icon2.png" alt="" />
           </div>
-          <div class="tech-box" :class="{'show': this.scrollTop > 3000}" ref="techBox3">
-            <img src="../assets/tech_icon3.png" alt="">
+          <div
+            class="tech-box"
+            :class="{ show: this.scrollTop > 3000 }"
+            ref="techBox3"
+          >
+            <img src="../assets/tech_icon3.png" alt="" />
             <div class="text">
-              <h3>{{$t('COL4[2].tit')}}</h3>
-              <div class="desc">{{$t('COL4[2].desc')}}</div>
-              <p>{{$t('COL4[2].con')}}</p>
+              <h3>{{ $t("COL4[2].tit") }}</h3>
+              <div class="desc">{{ $t("COL4[2].desc") }}</div>
+              <p>{{ $t("COL4[2].con") }}</p>
             </div>
           </div>
           <!-- <a href="javascript:;" class="item">
@@ -218,47 +234,47 @@
       <div class="inner-warp">
         <div class="col-tit">
           <div class="txt-bg">
-            <span>{{$t('COL6_tit')}}</span>
+            <span>{{ $t("COL6_tit") }}</span>
           </div>
         </div>
       </div>
       <div class="inner-wrap flex-1">
         <link-info
-          v-for="(item,index) in $t('linkArr1')"
+          v-for="(item, index) in $t('linkArr1')"
           :key="index"
           :item="item"
-          :class="`item item-`+index"
+          :class="`item item-` + index"
         ></link-info>
       </div>
       <div class="inner-wrap flex-1">
         <link-info
-          v-for="(item,index) in $t('linkArr2')"
+          v-for="(item, index) in $t('linkArr2')"
           :key="index"
           :item="item"
-          :class="`item item-`+index"
+          :class="`item item-` + index"
         ></link-info>
       </div>
       <div class="inner-warp">
         <div class="col-tit">
           <div class="txt-bg">
-            <span>{{$t('COL6_tit_1')}}</span>
+            <span>{{ $t("COL6_tit_1") }}</span>
           </div>
         </div>
       </div>
       <div class="inner-wrap flex-1">
         <link-info
-          v-for="(item,index) in $t('linkArr3')"
+          v-for="(item, index) in $t('linkArr3')"
           :key="index"
           :item="item"
-          :class="`item item-`+index"
+          :class="`item item-` + index"
         ></link-info>
       </div>
       <div class="inner-wrap flex-1">
         <link-info
-          v-for="(item,index) in $t('linkArr4')"
+          v-for="(item, index) in $t('linkArr4')"
           :key="index"
           :item="item"
-          :class="`item item-`+index"
+          :class="`item item-` + index"
         ></link-info>
       </div>
     </div>
@@ -281,7 +297,7 @@ export default {
   data() {
     return {
       scrollTop: 0,
-      lang: window.LANG,
+      lang: sessionStorage.getItem("LANG"),
       swiperOption: {
         slidesPerView: 1,
         spaceBetween: 30,
@@ -326,10 +342,11 @@ export default {
     LinkInfo,
     videoPlayer
   },
-  mounted () {
+  mounted() {
     window.onscroll = () => {
-      this.scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    }
+      this.scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+    };
   }
 };
 </script>
@@ -384,8 +401,8 @@ export default {
     left: 0;
     overflow: hidden;
   }
-  .col-desc{
-    margin: 30px 0  50px 0;
+  .col-desc {
+    margin: 30px 0 50px 0;
     padding: 0 20px;
     line-height: 30px;
     font-size: 18px;
@@ -439,7 +456,7 @@ export default {
         color: #7ec76f;
         margin-bottom: 40px;
         white-space: nowrap;
-        &.en{
+        &.en {
           text-align: left;
           font-size: 26px;
         }
@@ -447,8 +464,8 @@ export default {
       .con {
         font-size: 18px;
         line-height: 1.8;
-        &.en{
-          width: 80%
+        &.en {
+          width: 80%;
         }
       }
     }
@@ -477,12 +494,12 @@ export default {
 .col-2-1 {
   height: 550px;
   padding-top: 90px;
-  .box{
+  .box {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    .cj-list{
+    .cj-list {
       padding-top: 20px;
       width: 286px;
       min-height: 318px;
@@ -490,19 +507,19 @@ export default {
       flex-direction: column;
       border-radius: 8px;
       cursor: pointer;
-      &:hover{
-        background-color: rgba(72,115,64,.8);
+      &:hover {
+        background-color: rgba(72, 115, 64, 0.8);
       }
-      img{
+      img {
         margin: 0 auto;
       }
-      h3{
+      h3 {
         font-size: 22px;
         font-weight: bold;
         text-align: center;
         margin-bottom: 20px;
       }
-      p{
+      p {
         font-size: 18px;
         line-height: 30px;
         text-align: center;
@@ -550,55 +567,55 @@ export default {
     justify-content: space-between;
     flex-wrap: wrap;
     padding-bottom: 100px;
-    > .desc{
+    > .desc {
       margin-bottom: 110px;
       padding: 0 20px;
       font-size: 18px;
       line-height: 40px;
       text-align: center;
     }
-    .tech-box{
+    .tech-box {
       margin-bottom: 110px;
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      &.show{
+      &.show {
         opacity: 0;
-        animation: changePos .5s 0s ease-in forwards;
+        animation: changePos 0.5s 0s ease-in forwards;
       }
-      &:last-child{
+      &:last-child {
         margin-bottom: 0;
       }
-      img{
+      img {
         width: 454px;
         height: 223px;
       }
-      &:nth-child(3){
-        .text .desc::after{
+      &:nth-child(3) {
+        .text .desc::after {
           left: 130px;
           width: 480px;
         }
       }
-      &:nth-child(4){
-        .text .desc::after{
+      &:nth-child(4) {
+        .text .desc::after {
           left: 130px;
           width: 480px;
         }
       }
       .text {
         width: 643px;
-        h3{
+        h3 {
           font-size: 30px;
           color: #7fca70;
           line-height: 34px;
         }
-        .desc{
+        .desc {
           position: relative;
           font-size: 24px;
           margin-top: 10px;
           margin-bottom: 30px;
-          &::after{
+          &::after {
             position: absolute;
             content: "";
             left: 190px;
@@ -608,7 +625,7 @@ export default {
             background-color: #7fca70;
           }
         }
-        p{
+        p {
           text-align: justify;
           font-size: 18px;
         }
@@ -703,7 +720,7 @@ export default {
     justify-content: space-between;
     flex-wrap: wrap;
     // .item {
-      // z-index: 9;
+    // z-index: 9;
     // }
   }
   .flex-2 {
@@ -797,11 +814,11 @@ export default {
   font-size: 22px;
 }
 @keyframes changePos {
-  from{
+  from {
     opacity: 0;
-    transform:  translateY(100px)
+    transform: translateY(100px);
   }
-  to{
+  to {
     opacity: 1;
   }
 }

@@ -81,7 +81,7 @@ export default {
   name: "home",
   data() {
     return {
-      lang: window.LANG
+      lang: sessionStorage.getItem("LANG")
     };
   }
 };

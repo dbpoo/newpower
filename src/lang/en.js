@@ -188,5 +188,9 @@ module.exports = {
     infos: 'NPC是NewPower主链上发行的代币，作为整个新能源生态系统运转的动力，为了维持新能源主链的运行和整个新能源生态的价值交换',
     time: '2019 / 09 / 16'
   }],
-  DETAIL_Title: 'NEWS'
+  DETAIL_Title: 'NEWS',
+  NEWS_MORE: 'more',
+  NEWS_LOADING: 'loading...',
+  NEWS_END: 'END',
+  NEWS_LOADMORE: 'LOAD MORE'
 };
