@@ -14,7 +14,7 @@ const sysLang = navigator.language.substr(0, 2);
 const localLang = sessionStorage.getItem("LANG");
 
 const i18n = new VueI18n({
-  locale: localLang ? localLang : sysLang, // 语言标识
+  locale: localLang || sysLang, // 语言标识
   messages: {
     zh: require("./lang/zh"), // 中文语言包
     en: require("./lang/en") // 英文语言包
