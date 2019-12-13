@@ -52,7 +52,7 @@ export default {
       isLoading: false,
       isOver: false,
       page: 1,
-      categories: sessionStorage.getItem("LANG") == "zh" ? 4 : 5,
+      categories: sessionStorage.getItem("LANG") === "zh" ? 4 : 5,
       listArr: []
     };
   },
@@ -224,6 +224,66 @@ export default {
     a.isOver {
       border: 0;
       color: #ccc;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .col-1 {
+    height: 400px;
+    background: #090908 url("../assets/news_banner.jpg") center center no-repeat;
+    h3 {
+      width: 300px;
+      font-size: 40px;
+    }
+  }
+  .col-2{
+    padding-top: 0px;
+  }
+  .inner-wrap{
+    width: 100vw;
+    overflow: hidden;
+    .news{
+      padding-bottom: 0;
+      margin-bottom: 36px;
+      align-items: center;
+      img{
+        width: 100px;
+        height: 70px;
+        margin-right: 20px;
+      }
+      .text{
+        overflow: hidden;
+        h3{
+          font-weight: bold;
+          width: 100%;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          font-size: 12px;
+        }
+        p{
+          font-size: 12px;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          overflow: hidden;
+          line-height: 20px;
+        }
+        .infos{
+          .time,
+          .more{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .loadmore{
+      padding: 36px 0;
+      a{
+        padding: 10px 30px;
+        font-size: 16px;
+      }
     }
   }
 }

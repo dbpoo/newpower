@@ -3,7 +3,7 @@
     <header>
       <div class="inner-wrap">
         <a href="javascript:;" class="logo"></a>
-        <div class="menu">
+        <div class="menu pc">
           <router-link
             to="/"
             tag="a"
@@ -45,6 +45,48 @@
               </li>
             </ul>
           </div>
+        </div>
+        <div class="m menu-btn" :class="menuDetail ? 'close' : ''" @click="menuDetail=!menuDetail"></div>
+        <div class="menu-flyer" v-show="menuDetail">
+          <router-link
+            to="/"
+            tag="a"
+            class="menuHome hvr-underline-from-left"
+            >{{ $t("NAV.Home") }}</router-link
+          >
+          <a
+            :href="$t('NAV.WhitePagerLink')"
+            class="menuWhitePager hvr-underline-from-left"
+            target="_blank"
+            >{{ $t("NAV.WhitePager") }}</a
+          >
+          <router-link
+            to="/news"
+            tag="a"
+            class="menuWhitePager hvr-underline-from-left"
+            >{{ $t("NAV.News") }}</router-link
+          >
+          <router-link
+            to="/about"
+            tag="a"
+            class="menuWhitePager hvr-underline-from-left"
+            >{{ $t("NAV.About") }}</router-link
+          >
+          <a href="javascript:;">{{ $t("NAV.Language") }}</a>
+          <a
+            :class="lang == 'zh' ? 'active detail' : 'detail'"
+            href="javascript:;"
+            @click="changeLanguageVal"
+          >
+            中文
+          </a>
+          <a
+            :class="lang == 'en' ? 'active detail' : 'detail'"
+            href="javascript:;"
+            @click="changeLanguageVal"
+          >
+            English
+          </a>
         </div>
       </div>
     </header>
@@ -90,22 +132,28 @@ export default {
   name: "App",
   data() {
     return {
+      menuDetail: false,
       menuShow: false,
       lang: sessionStorage.getItem("LANG")
     };
+  },
+  watch: {
+    $route () {
+      this.menuDetail = false
+    }
   },
   methods: {
     changeLanguage(key, index) {
       this.menuShow = false;
     },
     changeLanguageVal() {
-      if (this.lang == "zh") {
+      if (this.lang === "zh") {
         this.lang = "en";
-        this.$i18n.locale = this.lang; //关键语句
+        this.$i18n.locale = this.lang; // 关键语句
         sessionStorage.setItem("LANG", this.lang);
       } else {
         this.lang = "zh";
-        this.$i18n.locale = this.lang; //关键语句
+        this.$i18n.locale = this.lang; // 关键语句
         sessionStorage.setItem("LANG", this.lang);
       }
       location.reload();
@@ -281,6 +329,60 @@ footer {
       text-align: right;
       font-size: 20px;
       color: #b0b0b0;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .inner-wrap{
+    width: 100vw;
+  }
+  header .inner-wrap{
+    padding: 10px;
+    .menu-btn{
+      margin-right: 10px;
+      width: 32px;
+      height: 32px;
+      background: url(./assets/switch.png) center center no-repeat;
+      background-size:  32px 28px;
+      &.close{
+        background: url(./assets/close.png) center center no-repeat;
+      }
+    }
+    .menu-flyer{
+      position: fixed;
+      top: 90px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      > a {
+        height: 40px;
+        line-height: 40px;
+        padding-left: 20px;
+        display: flex;
+        border-bottom: 1px solid #ccc;
+        &.detail{
+          padding-left: 2em;
+        }
+      }
+    }
+  }
+  footer {
+    .inner-wrap {
+      justify-content: flex-end;
+    }
+    .footer-logo{
+      display: none
+    }
+    .footer-link{
+      .footer-link-copyright{
+        padding-right: 20px;
+        font-size: 14px;
+      }
+      .footer-link-icon a.icon-weixin span{
+        left: 0;
+      }
     }
   }
 }

@@ -131,7 +131,7 @@
           </div>
         </div>
         <div class="box">
-          <div class="desc">{{ $t("COL4_DESC") }}</div>
+          <div class="desc" v-html="$t('COL4_DESC')"></div>
           <div
             class="tech-box"
             :class="{ show: this.scrollTop > 2400 }"
@@ -140,7 +140,7 @@
             <img src="../assets/tech_icon1.png" alt="" />
             <div class="text">
               <h3>{{ $t("COL4[0].tit") }}</h3>
-              <div class="desc">{{ $t("COL4[0].desc") }}</div>
+              <div class="desc" v-html="$t('COL4[0].desc')"></div>
               <p>{{ $t("COL4[0].con") }}</p>
             </div>
           </div>
@@ -149,12 +149,13 @@
             :class="{ show: this.scrollTop > 2700 }"
             ref="techBox2"
           >
+            <img class="m" src="../assets/tech_icon2.png" alt="" />
             <div class="text">
               <h3>{{ $t("COL4[1].tit") }}</h3>
-              <div class="desc">{{ $t("COL4[1].desc") }}</div>
+              <div class="desc" v-html="$t('COL4[1].desc')"></div>
               <p>{{ $t("COL4[1].con") }}</p>
             </div>
-            <img src="../assets/tech_icon2.png" alt="" />
+            <img class="pc" src="../assets/tech_icon2.png" alt="" />
           </div>
           <div
             class="tech-box"
@@ -164,7 +165,7 @@
             <img src="../assets/tech_icon3.png" alt="" />
             <div class="text">
               <h3>{{ $t("COL4[2].tit") }}</h3>
-              <div class="desc">{{ $t("COL4[2].desc") }}</div>
+              <div class="desc" v-html="$t('COL4[2].desc')"></div>
               <p>{{ $t("COL4[2].con") }}</p>
             </div>
           </div>
@@ -812,6 +813,135 @@ export default {
 
 /deep/.vjs-button > .vjs-icon-placeholder:before {
   font-size: 22px;
+}
+
+@media screen and (max-width: 640px) {
+  .inner-wrap{
+    width: 100vw;
+  }
+  .col-1 {
+    height: 400px;
+    background: #090908 url("../assets/bg_01.jpg") center center no-repeat;
+    background-size: 100% 100%;
+    .word{
+      width: unset;
+      height: 114px;
+      margin-top: 180px;
+      .tit{
+        font-size: 40px;
+      }
+      .con-zh{
+        font-size: 22px;
+      }
+      .con-en{
+        font-size: 18px;
+      }
+    }
+    h3 {
+      width: 300px;
+      font-size: 40px;
+    }
+  }
+  .col-2 {
+    height: auto;
+    .col-desc{
+      margin: 0;
+    }
+    .box{
+      flex-direction: column;
+      .word{
+        width: 80vw;
+        .tit{
+          font-size: 16px;
+          margin-bottom: 10px;
+          &.en{
+            font-size: 16px;
+            white-space: inherit;
+          }
+        }
+        .con{
+          font-size: 14px;
+          text-indent: 2em;
+        }
+      }
+    }
+  }
+  .col-2-1{
+    height: 700px;
+    padding-top: 20px;
+    .col-tit{
+      padding: 30px 0
+    }
+    .box{
+      flex-wrap: wrap;
+      .cj-list{
+        width: 50vw;
+        h3{
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+        p{
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  .col-3 {
+    height: 320px;
+    .videobox{
+      width: 100vw;
+      height: 237px;
+    }
+  }
+  .col-4 {
+    .box{
+      padding-bottom: 20px;
+      .desc{
+        margin-bottom: 40px;
+        font-size: 16px;
+      }
+      .tech-box{
+        margin-bottom: 20px;
+        flex-direction: column;
+        &:nth-last-child(2){
+          flex-wrap: wrap-reverse;
+        }
+        img{
+          width: 92vw;
+          height: auto;
+          margin: 20px auto;
+        }
+        &.show{
+          opacity: 1;
+          animation: unset;
+        }
+        .text{
+          width: 100vw;
+          padding: 0 20px;
+          h3{
+            font-size: 18px;
+          }
+          .desc{
+            font-size: 14px;
+            margin-bottom: 10px;
+            &::after{
+              height: 0
+            }
+          }
+          p{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .col-6{
+    padding: 20px 0;
+    .flex-1{
+      justify-content: center;
+    }
+  }
 }
 @keyframes changePos {
   from {

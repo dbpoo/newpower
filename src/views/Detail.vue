@@ -114,4 +114,39 @@ export default {
     font-size: 20px;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .col-1 {
+    height: 400px;
+    background: #090908 url("../assets/news_banner.jpg") center center no-repeat;
+    h3 {
+      width: 300px;
+      font-size: 40px;
+    }
+  }
+  .col-2{
+    padding-top: 0px;
+    .inner-wrap{
+      width: 100vw;
+      overflow: hidden;
+      .infos{
+        font-size: 14px;
+        padding: 8px 20px;
+      }
+      .title{
+        padding: 0 20px;
+        font-size: 16px;
+      }
+      .content{
+        /deep/ p {
+          font-size: 14px;
+          line-height: 24px;
+        }
+        /deep/ img {
+          width: 90vw!important;
+        }
+      }
+    }
+  }
+}
 </style>
